@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<decorators defaultdir="/decorator">
+	<decorator name="main" page="decorator.jsp">
+		<pattern>/page/*</pattern>
+		<pattern>/user/*</pattern>
+	</decorator>
+	<excludes>
+		<pattern>/page/banner*</pattern>
+	</excludes>
+	<decorator name="help" page="decorator1.jsp">
+		<pattern>/help/*</pattern>
+	</decorator>
+	<excludes>
+	</excludes>
+	<!-- layout 제외 설정 -->
+</decorators>
