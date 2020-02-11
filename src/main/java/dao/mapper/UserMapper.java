@@ -95,7 +95,7 @@ int supportcount(Map<String, Object> param);
 	,"</if>"
 	," and u.id = #{id} AND TIMESTAMPDIFF(DAY,NOW(),deadline) &lt; 0"
 	,"</script>"})
-int supportcount1(Map<String, Object> param); // ¸¶°¨
+int supportcount1(Map<String, Object> param); // ï¿½ï¿½ï¿½ï¿½
 
 
 
@@ -109,7 +109,7 @@ int supportcount1(Map<String, Object> param); // ¸¶°¨
 	," and u.id = #{id} AND TIMESTAMPDIFF(DAY,NOW(),deadline) > 0"
 	,"</script>"})
 int supportcount2(Map<String, Object> param);
-//ÁøÇà
+//ï¿½ï¿½ï¿½ï¿½
 
 @Select("select * from support where support_num=#{support_num}")
 Support supportnum(Map<String, Object> param);
@@ -126,6 +126,14 @@ void moneyUpdate(Map<String, Object> param);
 		+" AND s.id=#{id} join project p on p.project_num = s.project_num AND s.support_num=#{support_num}")
 
 Project supportDetail(Map<String, Object> param);
+
+
+
+@Update("update support set reward_state=2 where support_num=#{support_num}")
+void updateReward(Map<String, Object> param);
+
+@Select("select * from support where support_num=#{support_num} and id=#{id}")
+Support getSupportOne(Map<String, Object> param);
 }
 
 

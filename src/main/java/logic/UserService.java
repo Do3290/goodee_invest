@@ -76,6 +76,14 @@ public class UserService {
 		
 		return userDao.supportDetail(support_num, id);
 	}
+	public void updateReward(int support_num) {
+		userDao.updateReward(support_num);
+	}
+	public Support getSupportone(Support support_num, String id) {
+		
+		
+		return userDao.getSupportOne(support_num, id);
+	}
 	
 	
 

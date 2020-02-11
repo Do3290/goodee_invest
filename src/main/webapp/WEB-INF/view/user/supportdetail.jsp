@@ -135,17 +135,31 @@
 					<div class="_13KHfN73YmQgsYHxXvuh_J _3U6RUH-EASpZ_j8ls1HJyP">
 						<div class="_13KHfN73YmQgsYHxXvuh_J _3_IGkn3uaje0g2ZA6Tx9wd">
 							<label>선물 수령 상태</label>
-							<div
+							<div 
 								class="_13KHfN73YmQgsYHxXvuh_J _12TAeoYDPLF0sfa3UIt6uZ _3ZTEzsKL-qDLECUGq4QcLv"
 								style="cursor: pointer;">
-								<div
+								
+								
+								<form action = "getReward.do" method = "post">
+								<div 
 									class="_2dKJQZGqcB1T0xe0DzKY0H _152MAijd_UogerBKCVqZR_ _1lLHKI5v9AoCyeggtffvGZ">
-									<div>
-										<h3><c:if test="${supportDetail.reward_state eq 0}">미수령</c:if>
-											<c:if test="${supportDetail.reward_state eq 1}">배송중</c:if>
-											<c:if test="${supportDetail.reward_state eq 2}">수령</c:if></h3>
+									<input type= "hidden" value="${supportDetail.support_num }"name = "support_num">									
+									<div style = "width:100%; ">
+										<c:if test="${supportDetail.reward_state eq 0}">
+										<b>&nbsp;</b>
+										<b style="text-align: right">프로젝트 작성자가 확인중에 있습니다.</b>
+										</c:if>
+										<c:if test="${supportDetail.reward_state eq 1}">
+										<button type = "submit"style="text-align: right">수령완료</button>
+										</c:if>
+										<c:if test="${supportDetail.reward_state eq 2}">
+										<b>&nbsp;</b>
+										<b style="text-align: right">배송이 완료되었습니다.</b>
+										</c:if>
 									</div>
+									
 								</div>
+								</form>
 							</div>
 						</div>
 					</div>

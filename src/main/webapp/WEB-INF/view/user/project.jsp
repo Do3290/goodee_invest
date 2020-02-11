@@ -146,15 +146,18 @@
     <h3 class="b-project-card__title">
       <a href="/edit-project/f4fabf7d-d8ab-4b51-998b-d7a536b65f1f/sections/project-outline" class="[ yoke yoke--theme_light ]"></a>
     </h3>
+    <input type= "hidden" value="${project.subject_num }" name= project_num>
     <p class="b-project-card__creator">
       ${project.subject }
     </p>
-    <p class="b-project-card__blurb">
-      
-    </p>
   </div>
+  <p class="b-project-card__blurb">
+      <button onclick="location.href='../user/supportuserlist.do?'"> 후원목록 보러가기</button>
+    </p>
   <div class="b-project-card__gauge [ b-gauge ]">
-    <div class="b-gauge__liquid" style="width: 0%"></div>
+    
+    <div class="b-gauge__liquid" style="width: 0%">
+    </div>
   </div>
   <div class="b-project-card__figures">
 
