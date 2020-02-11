@@ -58,15 +58,16 @@ public class ProjectDao {
 		return sqlSession.getMapper(ProjectMapper.class).selectOneReward(param);
 	}
 
-	public List<Project> searchselect(String category, String state, Integer rate) {
+	public List<Project> searchselect(String category, String prostate, Integer rate) {
 		String rate2=null;
-		if(state != null) {
-			if(state.equals("진행")) {
-				state = ">";
-			}else if(state.equals("마감")){
-				state = "<";
+		String state = "승인대기";
+		if(prostate != null) {
+			if(prostate.equals("진행")) {
+				prostate = ">";
+			}else if(prostate.equals("마감")){
+				prostate = "<";
 			}else {
-				state = null;
+				prostate = null;
 			}
 		}
 		if(rate != null) {
@@ -80,8 +81,9 @@ public class ProjectDao {
 		}
 		param.clear();
 		param.put("category",category);
-		param.put("state",state);
+		param.put("prostate",prostate);
 		param.put("rate", rate2);
+		param.put("state",state);
 		return sqlSession.getMapper(ProjectMapper.class).searchselect(param);
 	}
 

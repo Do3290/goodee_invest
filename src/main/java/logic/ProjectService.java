@@ -77,8 +77,8 @@ public class ProjectService {
 		return projectDao.selectOneReward(num);
 	}
 
-	public List<Project> searchlist(String category, String state, Integer rate) {
-		return projectDao.searchselect(category, state, rate);
+	public List<Project> searchlist(String category, String prostate, Integer rate) {
+		return projectDao.searchselect(category, prostate, rate);
 	}
 
 	public List<Project> searchname(String search) {

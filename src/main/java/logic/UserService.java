@@ -40,8 +40,8 @@ public class UserService {
 	public List<String> datediff(String id, String project_num) {
 		return userDao.datediff(id, project_num);
 	}
-	public void supportwrite(String id, Support support, HttpServletRequest request, String address) {
-		userDao.supportwrite(id, support, address);
+	public void supportwrite(String id, Support support, HttpServletRequest request, String address, Integer project_num) {
+		userDao.supportwrite(id, support, address,project_num);
 		
 	}
 
@@ -76,13 +76,21 @@ public class UserService {
 		
 		return userDao.supportDetail(support_num, id);
 	}
-	public void updateReward(int support_num) {
-		userDao.updateReward(support_num);
+	public void updateReward(int project_num, String id) {
+		userDao.updateReward(project_num,id);
 	}
 	public Support getSupportone(Support support_num, String id) {
 		
 		
 		return userDao.getSupportOne(support_num, id);
+	}
+	public List<Project> getsupportUser(int num) {
+
+		
+		return userDao.getsupportUser(num);
+	}
+	public void giveReward(int project_num, String id) {
+		userDao.giveReward(project_num,id);
 	}
 	
 	

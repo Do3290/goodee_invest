@@ -136,8 +136,7 @@
      href="../page/info.do?num=${project.project_num}">
       <div class="b-project-card__head__link__inner">
         <div class="b-project-card__head__filter"></div>
-        <img src="https://d1pqmsyqo4bi9.cloudfront.net/assets/project_default_original.png"
-         alt="" class="b-project-card__head__pic">
+        <img style="width:216px; height:162px;"src="../page/file/${project.main_imageurl}">
       </div>
     </a>
   </figure>
@@ -152,7 +151,7 @@
     </p>
   </div>
   <p class="b-project-card__blurb">
-      <button onclick="location.href='../user/supportuserlist.do?'"> 후원목록 보러가기</button>
+      <button onclick="location.href='../user/supportuserlist.do?num=${project.project_num}'"> 후원목록 보러가기</button>
     </p>
   <div class="b-project-card__gauge [ b-gauge ]">
     

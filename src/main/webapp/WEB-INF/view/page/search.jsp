@@ -44,7 +44,7 @@
 												</select>
 											</span>
 											<span class="Button__ButtonWrapper-sc-10w4uz1-0 jlEoyt" style="margin-right: 1em">
-												<select class="select12" style="border: none;" name="state">
+												<select class="select12" style="border: none;" name="prostate">
 													<option value="" selected disabled hidden>상태</option>
 													<option value="전체">전체 프로젝트</option>
 													<option value="진행">진행중인 프로젝트</option>

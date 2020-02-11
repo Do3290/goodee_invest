@@ -176,11 +176,36 @@ public class UserController {
 		  	}
 		  	session.setAttribute("dbuser",dbuser);
 		  	session.setAttribute("loginUser", user);
+		  	System.out.println(dbuser);
 		session.setAttribute("token", accesstoken);
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("redirect:../page/main.do");
 		return mav;
 	}
+	
+	
+	@RequestMapping("supportuserlist")
+	public ModelAndView supportuserlist(Integer num) {
+	ModelAndView mav = new ModelAndView();
+	System.out.println(num);
+	List<Project> supportuserlist = service.getsupportUser(num);
+	System.out.println("뽑을꺼:"+supportuserlist);
+	mav.addObject("supportuserlist", supportuserlist);
+	return mav;
+}
+	@PostMapping("givereward")
+	public ModelAndView givereward(int project_num, HttpSession session, HttpServletRequest request) {
+		User loginuser = (User) session.getAttribute("loginUser");
+		String id = loginuser.getId();
+		System.out.println(request.getParameter("id"));
+		System.out.println(request.getParameter("project_num"));
+	
+		ModelAndView mav = new ModelAndView();
+		service.giveReward(project_num,id);
+		mav.setViewName("redirect:../user/supportuserlist.do?num="+project_num);
+		return mav;
+	}
+	
 	@RequestMapping("supportdetail")
 	public ModelAndView supportdetail( Support support, Project project, User user, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
@@ -189,21 +214,25 @@ public class UserController {
 		int support_num = support.getSupport_num();
 		System.out.println(support_num);
 		Project supportDetail = service.supportDetail(support_num, id);
-		session.setAttribute("support_num", support_num);
 		mav.addObject("supportDetail",supportDetail);
+		System.out.println(supportDetail);
 		return mav;
 	}
 	@PostMapping("getReward")
-	public ModelAndView getReward(int support_num, HttpSession session) {
+	public ModelAndView getReward( int support_num,int project_num, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
+		User loginuser = (User) session.getAttribute("loginUser");
+		String id = loginuser.getId();
 		
-		service.updateReward(support_num);
+		System.out.println("이게멀까"+project_num);
+		service.updateReward(project_num, id);
 		
 		mav.setViewName("redirect:../user/supportdetail.do?support_num="+support_num);
 		
 		return mav;
 	
 	}
+
 	@RequestMapping("support")
 	public ModelAndView support(HttpSession session, Support support,
 			String project_num, User user, Project project, String searchtype, String searchcontent) {
@@ -240,7 +269,6 @@ public class UserController {
 	public ModelAndView project(String id, String project_num)  {
 		ModelAndView mav = new ModelAndView();
 		List<Project> userproject = service.getProject(id,project_num);
-		System.out.println(userproject);
 		int listcount = service.projectcount(id);
 		mav.addObject("userproject",userproject);
 		mav.addObject("listcount", listcount);
@@ -248,10 +276,10 @@ public class UserController {
 	}
 	
 	@GetMapping("supporting")
-	public ModelAndView supporting(String id,User user, Support support,HttpSession session) {
+	public ModelAndView supporting(String id,User user, Support support,HttpSession session, Integer num) {
 		ModelAndView mav = new ModelAndView();
 		User dbuser = (User) session.getAttribute("dbuser");
-		
+		System.out.println(num);
 		String acc = dbuser.getAccount();
 		String a = acc.substring(0, 3);
 		String b = acc.substring(3,6);
@@ -259,21 +287,23 @@ public class UserController {
 		session.setAttribute("a", a);
 		session.setAttribute("b", b);
 		session.setAttribute("c", c);
+		mav.addObject("project_num",num);
+		
 		return mav;
 		
 	}
 	@PostMapping("supporting")
-	public ModelAndView supporting(HttpSession session, Support support, HttpServletRequest request) {
+	public ModelAndView supporting(HttpSession session, Support support, HttpServletRequest request, Integer project_num) {
 		ModelAndView mav = new ModelAndView();
 		User loginuser = (User) session.getAttribute("loginUser");
-		
+		System.out.println("번호는?"+project_num);
 		String zipcode = request.getParameter("zipcode");
 		String address1 = request.getParameter("address1");
 		String address2 = request.getParameter("address2");
 		String address = zipcode+"/"+address1+"/"+address2;
 		String id = loginuser.getId();
 		int support_money = support.getSupport_money();
-		service.supportwrite(id,support, request,address);
+		service.supportwrite(id,support, request,address,project_num);
 		int money = loginuser.getMoney();
 		int updatemoney =money - support_money;
 		service.moneyUpdate(id, updatemoney);

@@ -102,9 +102,16 @@
 							<span class="SiteHeader__ItemLabel-q8dvod-8 hWygls" data-reactid="15">프로젝트 둘러보기</span>
 						</button>
 						<span class="SiteHeader__ForMobile-q8dvod-9 ihCbfB" data-reactid="16">
-							<a class="SiteHeader__LinkItem-q8dvod-6 dALTNz" href="../page/agree.do" data-reactid="17">
-								<span class="SiteHeader__ItemLabel-q8dvod-8 hWygls" data-reactid="18">프로젝트 올리기</span>
-							</a>
+							<c:if test= "${loginUser.id  == null}" >
+				                <a class="SiteHeader__LinkItem-q8dvod-6 dALTNz" href="../page/main.do" data-reactid="17">
+				                	<span class="SiteHeader__ItemLabel-q8dvod-8 hWygls" data-reactid="18">프로젝트 올리기</span>
+				                </a>
+                 			</c:if>
+			                <c:if test= "${loginUser.id  != null}" >
+			                   <a class="SiteHeader__LinkItem-q8dvod-6 dALTNz" href="../page/agree.do" data-reactid="17">
+			                      <span class="SiteHeader__ItemLabel-q8dvod-8 hWygls" data-reactid="18">프로젝트 올리기</span>
+			                   </a>
+			                </c:if>
 						</span>
 					</div>
 					<div class="SiteHeader__CenterMenu-q8dvod-3 hbKGuE" data-reactid="19">
