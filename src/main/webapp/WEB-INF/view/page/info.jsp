@@ -1,21 +1,174 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<style>
+		.tab {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		/* Float the list items side by side */
+		.ContentsNavigation__NavLeft-mwsx7i-3 a {
+			float: left;
+		}
+		/* Style the links inside the list items */
+		.ContentsNavigation__NavLeft-mwsx7i-3 a {
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+			padding: 14px 16px;
+			font-size: 17px;
+			transition:0.3s;
+		}
+		.ProjectPage__ProjectContentsMainColumn-f3cisk-2.current {
+		display: block;
+		}
+		.ProjectPage__ProjectContentsMainColumn-f3cisk-2{
+		display: none;
+		background-color:rgb(246,245,245);
+		padding: 6px 12px;
+		}
+	.evTQgg {
+    width: 100%;
+    margin: 2rem .5rem 1rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+	}
+	.gXVgCu {
+    padding: 1.2rem 1.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #757575;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.dQQULI {
+    color: #757575;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 700;
+    padding: .3em 1em;
+    font-size: .95em;
+    border-radius: 0.28571429rem;
+    color: rgba(0,0,0,.7);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    background-color: #d9d9d9;
+}
+	.jXFesk {
+    color: #757575;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 700;
+    padding: .3em 1em;
+    font-size: .95em;
+    border-radius: 0.28571429rem;
+	}       
+		textarea{
+		border: 1px solid #ddd;
+    	border-radius: 2px;
+    	resize: vertical;
+    	width: 100%;
+    	outline: none;
+    	padding: 10px;
+    	min-height: 150px;
+	}
+	.list_body{
+		display: inline-block;
+		border:black;
+	}
+	.imlXFPx{
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+	padding: 1.2rem 1.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #757575;
+    font-size: 1.1rem;
+    font-weight: bold;
+	}
+	.jABjIds {
+    width: 100vw;
+    height: 48px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    border-top: 1px solid #efefef;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    z-index: 10;
+    }
+    .inGkRv {
+    font-weight: bolder;
+    margin-bottom: 1.25rem;
+    }
+    .cJHfnu {
+    padding: 2rem;
+    }
+    .cWdscR {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 1.5rem;
+}
+	a.ContentsNavigation__NavItem-mwsx7i-0.current
+	{
+	color: rgba(0,0,0,1);
+	border-bottom: 3px solid rgba(0,0,0,1);
+	padding-bottom: calc(0.5rem - 3px);
+	}
+}
+</style>
 </head>
-
 <body>
 <div id="react-view">
 	<div data-reactroot="" data-reactid="1">
-		<div class="ScrollTop__ScrollTopBtnWrapper-j9uqn7-0 cKbfhA" data-reactid="3">
-			<button class="ScrollTop__ScrollTopBtn-j9uqn7-1 bcbYyv" data-reactid="4">
-				<span data-reactid="5">ÃÖ»óÀ§·Î</span>
-			</button>
-			<i class="_3EDOT6mnWfo2CobuYD5UO7 _2PY6DpDelT9jvKKFjCr7gd _14AOh5T6DdcgeGZ5YUV9uR _1QY7TzdLHKX3-BKPDNNYKF" data-reactid="6"></i>
-		</div>
 		<div data-reactid="7">
 			<div data-reactid="39">
 				<div class="ProjectIntroduction__ProjectIntroductionBackground-sc-1o2ojgb-0 gsZkXT" data-reactid="41">
@@ -23,56 +176,54 @@
 						<div class="ProjectIntroduction__ProjectIntroductionWrapper-sc-1o2ojgb-1 bnFLKn" data-reactid="43">
 							<div class="ProjectIntroduction__ProjectOutline-sc-1o2ojgb-2 jbdzfG" data-reactid="44">
 								<div class="ProjectIntroduction__ProjectOutlineInner-sc-1o2ojgb-3 fFIyMZ" data-reactid="45">
-									<a href="/discover?category=narrative-film" data-reactid="46">
-										<span class="ProjectIntroduction__ProjectCategory-sc-1o2ojgb-4 fNvuiJ" data-reactid="47">±Ø¿µÈ­</span>
+									<a href="search.do?category=${project.category}" data-reactid="46">
+										<span class="ProjectIntroduction__ProjectCategory-sc-1o2ojgb-4 fNvuiJ" data-reactid="47">${project.category}</span>
 									</a>
-									<h1 class="ProjectIntroduction__ProjectTitle-sc-1o2ojgb-5 cWQlcy" data-reactid="48">Çö±âÁõ¿¡ »ç·ÎÀâÈù È÷Ä¡ÄÛ: È÷Ä¡ÄÛÀÇ ÀÛ°¡·ĞÀ» ´Ù½Ã ¸»ÇÏ´Ù</h1>
+									<h1 class="ProjectIntroduction__ProjectTitle-sc-1o2ojgb-5 cWQlcy" data-reactid="48">${project.subject}</h1>
 									<div class="ProjectIntroduction__Creators-sc-1o2ojgb-6 fsPnxP" data-reactid="49">
 										<span class="ProfileImg-sc-1vio56c-0 byDyIf" data-reactid="50"></span>
-										<a class="ProjectIntroduction__CreatorName-sc-1o2ojgb-7 jDbkqK" href="https://tumblbug.com/u/vertigo/projects" target="_blank" rel="noopener noreferrer" data-reactid="51">Çö±âÁõxÈ÷Ä¡ÄÛ</a>
+										<a class="ProjectIntroduction__CreatorName-sc-1o2ojgb-7 jDbkqK" href="https://tumblbug.com/u/vertigo/projects" target="_blank" rel="noopener noreferrer" data-reactid="51">${project.id}</a>
 									</div>
 								</div>
 							</div>
-							<div class="ProjectIntroduction__ProjectIntroductionMainColumn-sc-1o2ojgb-8 ZOwbJ" data-reactid="52">
-								<figure class="ProjectIntroduction__ProjectCoverImageFigure-sc-1o2ojgb-9 fUBtAC" data-reactid="53">
-									<img class="ProjectIntroduction__ProjectCoverImage-sc-1o2ojgb-11 hGsHpc" src="https://tumblbug-pci.imgix.net/b4572ab4454762ded86a52b210ac79878e26a0da/5db1c777a4e46bb72fef6aef11cb246d5d55be1c/3f1f9fbe8212953634b6751da5262d05d983d691/5114cbad-c41b-4ffc-bcf4-981dfd8b1d15.jpg?ixlib=rb-1.1.0&amp;w=1240&amp;h=930&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=e54da650df58f9ad584b5524c821cd79" alt="ÇÁ·ÎÁ§Æ® Ä¿¹ö ÀÌ¹ÌÁö" data-reactid="54">
-								</figure>
+							<div class="ProjectIntroduction__ProjectIntroductionMainColumn-sc-1o2ojgb-8 ZOwbJ" style="height: 484px;"data-reactid="52">
+								<img src="file/${project.main_imageurl}" width="100%" height="100%">
 							</div>
 							<aside class="ProjectIntroduction__ProjectIntroductionSubColumn-sc-1o2ojgb-12 fHdIrJ" data-reactid="55">
 								<div class="ProjectIntroduction__FundingStatus-sc-1o2ojgb-13 gGVEjs" data-reactid="56">
 									<div class="ProjectIntroduction__Metric-sc-1o2ojgb-14 cZUBTY" data-reactid="57">
-										<div class="ProjectIntroduction__StatusTitle-sc-1o2ojgb-15 hrvSQV" data-reactid="58">¸ğÀÎ±İ¾×</div>
-										<div class="ProjectIntroduction__StatusValue-sc-1o2ojgb-16 lgJcVA" data-reactid="59">1,515,000
-											<span class="ProjectIntroduction__Small-sc-1o2ojgb-18 lnSbIU" data-reactid="61">¿ø</span>
-											<span class="ProjectIntroduction__FundingRate-sc-1o2ojgb-17 cNDicH" data-reactid="62">84%</span>
+										<div class="ProjectIntroduction__StatusTitle-sc-1o2ojgb-15 hrvSQV" data-reactid="58">ëª¨ì¸ê¸ˆì•¡</div>
+										<div class="ProjectIntroduction__StatusValue-sc-1o2ojgb-16 lgJcVA" data-reactid="59"><fmt:formatNumber value="${project.support_money}" pattern="#,###"/>
+											<span class="ProjectIntroduction__Small-sc-1o2ojgb-18 lnSbIU" data-reactid="61">ì›</span>
+											<span class="ProjectIntroduction__FundingRate-sc-1o2ojgb-17 cNDicH" data-reactid="62">${project.pop}%</span>
 										</div>
 									</div>
 									<div class="ProjectIntroduction__Metric-sc-1o2ojgb-14 cZUBTY" data-reactid="65">
-										<div class="ProjectIntroduction__StatusTitle-sc-1o2ojgb-15 hrvSQV" data-reactid="66">³²Àº½Ã°£</div>
-										<div class="ProjectIntroduction__StatusValue-sc-1o2ojgb-16 lgJcVA" data-reactid="67">5
-											<span class="ProjectIntroduction__Small-sc-1o2ojgb-18 lnSbIU" data-reactid="69">ÀÏ</span>
+										<div class="ProjectIntroduction__StatusTitle-sc-1o2ojgb-15 hrvSQV" data-reactid="66">ë‚¨ì€ì‹œê°„</div>
+										<div class="ProjectIntroduction__StatusValue-sc-1o2ojgb-16 lgJcVA" data-reactid="67"><c:if test="${project.deadline < 0}">ë§ˆê°</c:if><c:if test="${project.deadline == 0}">ë‹¹ì¼ë§ˆê°</c:if><c:if test="${project.deadline > 0}">${project.deadline}</c:if>
+											<span class="ProjectIntroduction__Small-sc-1o2ojgb-18 lnSbIU" data-reactid="69">ì¼</span>
 										</div>
 									</div>
 									<div class="ProjectIntroduction__Metric-sc-1o2ojgb-14 cZUBTY" data-reactid="70">
-										<div class="ProjectIntroduction__StatusTitle-sc-1o2ojgb-15 hrvSQV" data-reactid="71">ÈÄ¿øÀÚ</div>
-										<div class="ProjectIntroduction__StatusValue-sc-1o2ojgb-16 lgJcVA" data-reactid="72">11
-											<span class="ProjectIntroduction__Small-sc-1o2ojgb-18 lnSbIU" data-reactid="74">¸í</span>
+										<div class="ProjectIntroduction__StatusTitle-sc-1o2ojgb-15 hrvSQV" data-reactid="71">í›„ì›ì</div>
+										<div class="ProjectIntroduction__StatusValue-sc-1o2ojgb-16 lgJcVA" data-reactid="72">${project.supportcnt}
+											<span class="ProjectIntroduction__Small-sc-1o2ojgb-18 lnSbIU" data-reactid="74">ëª…</span>
 										</div>
 									</div>
 								</div>
 								<div class="FundingInformation-cjd67l-0 lZmZZ" data-reactid="75">
 									<div class="FundingInformation__FundingInformationInner-cjd67l-1 ccBEhl" data-reactid="76">
-										<a class="move-to-helpcenter" target="_blank" href="https://help.tumblbug.com/hc/ko/categories/115001047348--%ED%9B%84%EC%9B%90%EC%9E%90-%EC%84%BC%ED%84%B0" title="ÈÄ¿øÀÚ ¼¾ÅÍ ¹Ù·Î°¡±â" data-reactid="77">ÈÄ¿øÀÚ ¼¾ÅÍ ÀÌµ¿</a>
-										<div data-reactid="78">Æİµù ÁøÇàÁß</div>
-										<span data-reactid="79">¸ñÇ¥ ±İ¾×ÀÎ 1,800,000¿øÀÌ ¸ğ¿©¾ß¸¸ °áÁ¦µË´Ï´Ù.
-											<br>°áÁ¦´Â 2020³â 1¿ù 21ÀÏ¿¡ ´ÙÇÔ²² ÁøÇàµË´Ï´Ù.
+										<a class="move-to-helpcenter" target="_blank" href="https://help.tumblbug.com/hc/ko/categories/115001047348--%ED%9B%84%EC%9B%90%EC%9E%90-%EC%84%BC%ED%84%B0" title="í›„ì›ì ì„¼í„° ë°”ë¡œê°€ê¸°" data-reactid="77">í›„ì›ì ì„¼í„° ì´ë™</a>
+										<div data-reactid="78">í€ë”© ì§„í–‰ì¤‘</div>
+										<span data-reactid="79">ëª©í‘œ ê¸ˆì•¡ì¸ ${project.goal}ì›ì´ ëª¨ì—¬ì•¼ë§Œ ê²°ì œë©ë‹ˆë‹¤.
+											<br>ê²°ì œëŠ” ${project.date} ì— ë‹¤í•¨ê»˜ ì§„í–‰ë©ë‹ˆë‹¤.
 										</span>
 									</div>
 								</div>
 								<div class="ProjectIntroduction__ProjectButtons-sc-1o2ojgb-19 fHOYOE" data-reactid="87">
 									<div class="ProjectIntroduction__ProjectButtonsInner-sc-1o2ojgb-20 frPGIq" data-reactid="88">
 										<div class="ProjectIntroduction__PrimaryButton-sc-1o2ojgb-21 lcgtza" data-reactid="89">
-											<button class="Button-sc-1x93b2b-0 KCBYB" data-reactid="90" onclick = "location.href='../user/supporting.do'">ÇÁ·ÎÁ§Æ® ¹Ğ¾îÁÖ±â</button>
+											<button class="Button-sc-1x93b2b-0 KCBYB" data-reactid="90" onclick = "location.href='../user/supporting.do?num=${project.project_num}'">í”„ë¡œì íŠ¸ ë°€ì–´ì£¼ê¸°</button>
 										</div>
 									</div> 
 								</div>
@@ -82,14 +233,11 @@
 				</div>
 				<div id="contentsNavigation" data-reactid="108">
 					<span style="font-size:0;" data-reactid="109"></span>
-					<nav class="ContentsNavigation__ProjectContentsNavigation-mwsx7i-1 jABjId" data-reactid="110">
+					<nav class="ContentsNavigation__ProjectContentsNavigation-mwsx7i-1 jABjIds" data-reactid="110">
 						<div class="ContentsNavigation__ProjectContentsNavigationInner-mwsx7i-2 OvVKa" data-reactid="111">
 							<div class="ContentsNavigation__NavLeft-mwsx7i-3 buZwam" data-reactid="112">
-								<a class="ContentsNavigation__NavItem-mwsx7i-0 cjInbB" style="color:rgba(0,0,0,1);border-bottom:3px solid rgba(0,0,0,1);padding-bottom:calc(0.5rem - 3px);" href="/study_vertigo/story" data-reactid="113">½ºÅä¸®</a>
-								<a class="ContentsNavigation__NavItem-mwsx7i-0 cjInbB" href="/study_vertigo/community" data-reactid="114">Ä¿¹Â´ÏÆ¼
-									<span class="ContentsNavigation__CommunityPostAmount-mwsx7i-6 jXWmuN" data-reactid="116"></span>
-								</a>
-								<a class="ContentsNavigation__NavItem-mwsx7i-0 cjInbB" href="/study_vertigo/policy" data-reactid="117">Æİµù ¾È³»</a>
+								<a class="ContentsNavigation__NavItem-mwsx7i-0 cjInbB current" onclick="story_show()" id="tab1btn"data-tab="tab1" data-reactid="113">ìŠ¤í† ë¦¬</a>
+								<a class="ContentsNavigation__NavItem-mwsx7i-0 cjInbB" onclick="funding_show()" id="tab3btn" data-tab="tab3"  data-reactid="117">í€ë”© ì•ˆë‚´</a>		
 							</div>
 						</div>
 					</nav>
@@ -97,166 +245,69 @@
 				<div class="ProjectPage__ProjectContentsBackground-f3cisk-0 bIXbv" data-reactid="118">
 					<div class="Container-gci8y7-0 MskhC" data-reactid="119">
 						<div class="ProjectPage__ProjectContents-f3cisk-1 dqKUJc" data-reactid="120">
-							<div class="ProjectPage__ProjectContentsMainColumn-f3cisk-2 hzJfoW" data-reactid="121">
+							<div id="tab1"class="ProjectPage__ProjectContentsMainColumn-f3cisk-2 hzJfoW current" data-reactid="121">
 								<div class="ProjectPage__MainColumnInner-f3cisk-4 kGPPtA" data-reactid="122">
 									<div class="Card-sc-1sgtmvk-0 gBrdMC" data-reactid="123">
 										<div class="StoryCard__StoryCardInner-sc-6cra5i-0 imlXFP" data-reactid="124">
-											<div class="storyContent">
-												<p class="p1">
-													<span class="s1">µè°í</span>
-													<span class="s1">½Í¾úÁö¸¸</span> 
-													<span class="s1">¾Æ½±°Ô</span> 
-													<span class="s1">³õÃÆ´ø</span> 
-													<span class="s1">°­ÀÇ¸¦</span> 
-													<span class="s1">´Ù½Ã</span> 
-													<span class="s1">¿­±â</span> 
-													<span class="s1">À§ÇØ </span>
-													<span class="s1">ÀÌ ÇÁ·ÎÁ§Æ®¸¦ ½ÃÀÛÇÕ´Ï´Ù.<br></span>
-												</p>
-												<p class="p1">
-													<span class="s1">ÀÌ¹ø °­ÀÇ¿¡¼­ ÃÖÀûÀÇ ¹æ½ÄÀÌ</span> ¾î¶² °ÍÀÎÁö °­»ç´Ô²² ¹°¾ú°í 
-													<span class="s1">±×¿¡ µû¶ó</span>&nbsp;
-													<span class="s1">Á¶±İ</span> 
-													<span class="s1">»õ·Î¿î</span> 
-													<span class="s1">¹æ½ÄÀ¸·Î</span> °­ÀÇ¸¦ ±¸¼ºÇØº¸°íÀÚ Çß½À´Ï´Ù.<br><br>
-													<span class="s1">ÀÌ</span> 
-													<span class="s1">°­ÀÇ¿¡´Â</span> 
-													<span class="s1">Ä¥ÆÇÀÌ</span> 
-													<span class="s1">¾ø½À´Ï´Ù</span>
-													<span class="s2">. </span>
-													<span class="s1">±×</span> 
-													<span class="s1">ÀÚ¸®¿¡</span> 
-													<span class="s1">½ºÅ©¸°ÀÌ</span> 
-													<span class="s1">ÀÖ½À´Ï´Ù</span>
-													<span class="s2">.<br></span>
-													<span class="s1">¿ì¸®´Â</span> 
-													<span class="s1">¹®ÀÚ°¡</span> 
-													<span class="s1">¾Æ´Ñ</span> 
-													<span class="s1">¿µÈ­¸¦</span> 
-													<span class="s1">º¸¸ç</span> ¡®
-													<span class="s1">È÷Ä¡ÄÛ¡¯¿¡</span> 
-													<span class="s1">´ëÇØ</span> 
-													<span class="s1">ÀÌ¾ß±â¸¦</span> 
-													<span class="s1">³ª´­</span> 
-													<span class="s1">°Ì´Ï´Ù</span>
-													<span class="s2">. </span>
-													<span class="s1">»õÇÏ¾á</span> 
-													<span class="s1">Çü±¤µî°ú</span> 
-													<span class="s1">¿­À»</span> 
-													<span class="s1">¸ÂÃá</span> 
-													<span class="s1">Ã¥»ó</span> 
-													<span class="s1">´ë½Å </span>
-													<span class="s1">¾Æ´ÁÇÑ</span> 
-													<span class="s1">Ä«Æä</span> 
-													<span class="s1">°ø°£°ú</span>&nbsp;<span class="s1">¿µÈ­¸¦</span> <span class="s1">À§ÇÑ</span> <span class="s1">»ó¿µ½Ã¼³ÀÌ</span> <span class="s1">ÇÕÃÄÁø</span><span class="s2"> ¡®</span><span class="s1">°ø°£</span> <span class="s1">Çö±âÁõ</span><span class="s2">¡¯</span><span class="s1">¿¡¼­</span> <span class="s1">°­ÀÇ¸¦</span> <span class="s1">ÁøÇàÇÕ´Ï´Ù</span><span class="s2">.</span></p>
-<p class="p1"><strong><span class="s1">°­ÀÇ</span> <span class="s1">Áß¿¡´Â</span> <span class="s1">Àå¸éÀ»</span> <span class="s1">³¹³¹ÀÌ</span> <span class="s1">µ¶ÇØÇÏ¸é¼­</span> <span class="s1">¿µÈ­¸¦</span> <span class="s1">º¾´Ï´Ù</span><span class="s2">.<br></span><span class="s1">ÇÊ¿äÇÑ</span> <span class="s1">Àå¸éµéÀ»</span> <span class="s1">Á¶°¢Á¶°¢À¸·Î</span> <span class="s1">º¸Áö</span> <span class="s1">¾Ê°í</span><span class="s2">, </span><u><span class="s1">È÷Ä¡ÄÛÀ»</span> <span class="s1">ÇØ¸íÇÏ´Â</span> <span class="s1">°³³äµéÀ»</span> <span class="s1">°­»ç°¡</span><span class="s2"> '</span><span class="s1">ÄÚ¸àÅÍ¸®</span><span class="s2">' </span><span class="s1">ÇÏµíÀÌ</span> <span class="s1">¼³¸íÇÔÀ¸·Î½á </span><span class="s1">È÷Ä¡ÄÛÀÇ</span> <span class="s1">ÀÛÇ°</span> <span class="s1">ÇÑ</span> <span class="s1">Æí</span><span class="s2">, </span><span class="s1">ÇÑ</span> <span class="s1">ÆíÀ»</span> <span class="s1">¿ÂÀüÈ÷</span> <span class="s1">ÀÌÇØÇÒ</span> <span class="s1">¼ö</span> <span class="s1">ÀÖµµ·Ï</span> <span class="s1">ÇÕ´Ï´Ù</span></u></strong><span class="s2"><u><strong>.</strong></u> <br><br></span>±×·¸°Ô 1ºÎ°¡ ³¡³ª¸é, 2ºÎ·Î ÀÚÀ² °¨»ó ½Ã°£ÀÌ ÁÖ¾îÁı´Ï´Ù. 2ºÎ¿¡¼­´Â ¿µÈ­¸¦ º¸±âµµ, ÇÔ²² ÀÌ¾ß±â¸¦ ³ª´©±âµµ ÇÕ´Ï´Ù.&nbsp;<br><br><span class="s1">ÀÌ°ÍÀ»</span> <span class="s1">°¡´ÉÇÏ°Ô</span> <span class="s1">ÇÏ±â</span> <span class="s1">À§ÇØ</span><span class="s2">, </span><span class="s1">ÃÖ¼Ò</span><span class="s2"> 12</span><span class="s1">¸íÀÇ</span> <span class="s1">¼ö°­»ıÀÌ</span> <span class="s1">¸ğÀÌ¸é</span> <span class="s1">°­ÀÇ¸¦</span> <span class="s1">¿­±â·Î</span> <span class="s1">Çß½À´Ï´Ù</span><span class="s2">.<br><br></span></p>
-<hr>
-<h2 class="p1"><em><span class="s1">¡°¾ËÇÁ·¹µå</span> <span class="s1">È÷Ä¡ÄÛ¡±</span></em></h2>
-<p class="p1">&nbsp;</p>
-<p class="p1"><span class="s1">¿µÈ­¿¡</span> <span class="s1">°ü½ÉÀÌ</span> <span class="s1">ÀÖ´Â</span> <span class="s1">»ç¶÷ÀÌ¶ó¸é</span> <span class="s1">È÷Ä¡ÄÛÀÌ¶ó´Â</span> <span class="s1">ÀÌ¸§À»</span><span class="s2">, </span><span class="s1">Àû¾îµµ</span> <span class="s1">±×ÀÇ</span> <span class="s1">ÀÛÇ°</span> <span class="s1">ÇÑ</span> <span class="s1">Æí</span> <span class="s1">Á¤µµ´Â</span> <span class="s1">µé¾îº¸¼ÌÀ»</span> <span class="s1">°Ì´Ï´Ù. </span><span class="s1">Á÷Á¢ÀûÀ¸·Î</span> <span class="s1">È÷Ä¡ÄÛ¿¡°Ô</span> <span class="s1">¿À¸¶ÁÖ¸¦</span> <span class="s1">¹ÙÄ¡´Â</span> <span class="s1">¿µÈ­µé</span> <span class="s1">»Ó¸¸</span> <span class="s1">¾Æ´Ï¶ó </span><span class="s1">¿À´Ã³¯</span> <span class="s1">¿ì¸®°¡</span> <span class="s1">°ü¶÷ÇÏ´Â</span> <span class="s1">´ëºÎºĞÀÇ</span> <span class="s1">¿µÈ­µé¿¡¼­µµ</span> <span class="s1">È÷Ä¡ÄÛÀÇ</span> <span class="s1">À¯»êÀº</span> <span class="s1">È°¿ëµÇ°í</span> <span class="s1">ÀÖ½À´Ï´Ù</span><span class="s2">.</span></p>
-<p class="p1"><strong><u><span class="s1">±×°¡</span> <span class="s1">¿©ÀüÈ÷</span> <span class="s1">¿ì¸®</span> <span class="s1">°ç¿¡</span> <span class="s1">³²¾ÆÀÖ´Â</span> <span class="s1">ÀÌÀ¯´Â</span> <span class="s1">¹«¾ùÀÏ±î¿ä</span><span class="s2">?<br></span></u><u><span class="s1">ÈÄ´ëÀÇ</span> <span class="s1">°¨µ¶µé¿¡°Ô</span> <span class="s1">ÀÌÅä·Ï</span> <span class="s1">Á¸°æ¹ŞÀ¸¸ç</span> <span class="s1">º»º¸±â°¡</span> <span class="s1">µÇ´Â</span> <span class="s1">ÀÌÀ¯´Â</span> <span class="s1">¹«¾ùÀÏ±î¿ä</span><span class="s2">?</span></u></strong></p>
-<p class="p1"><span class="s1">ÀÌ</span> <span class="s1">°­ÀÇ¿¡¼­´Â</span> <span class="s1">È÷Ä¡ÄÛÀÇ</span> <span class="s1">¿µÈ­Àû</span> <span class="s1">±â¼úºÎÅÍ</span> <span class="s1">ÀÛ°¡Àû</span> <span class="s1">¼¼°è°ü±îÁö </span><span class="s2">¡®</span><span class="s1">´ë°¡</span><span class="s2">¡¯&nbsp;</span><span class="s1">¾ËÇÁ·¹µå</span> <span class="s1">È÷Ä¡ÄÛÀ»</span> <span class="s1">ÀÌÇØÇÏ´Âµ¥</span> <span class="s1">ÇÊ¿äÇÑ</span> <span class="s1">±âº»</span> <span class="s1">°³³äµéÀ»</span> <span class="s1">ÇĞ½ÀÇÕ´Ï´Ù</span><span class="s2">. </span><span class="s1">ÀÌ¸¦</span> <span class="s1">ÅëÇØ</span><span class="s2">&nbsp;</span><span class="s1">È÷Ä¡ÄÛÀÇ</span> <span class="s1">ÀÛ°¡·ĞÀ»</span> <span class="s1">¼÷ÁöÇÏ°í</span> <span class="s1">È÷Ä¡ÄÛÀÇ</span> <span class="s1">ÀÛÇ°¼¼°è</span> <span class="s1">ÀüÃ¼¸¦ </span><span class="s1">Á¶¸ÁÇÒ</span> <span class="s1">¼ö</span> <span class="s1">ÀÖ´Â</span> <span class="s1">½Ã°¢À»</span> <span class="s1">°®Ãçº¾´Ï´Ù</span><span class="s2">.&nbsp;<br><br></span></p>
-<hr>
-<h2>1. °­ÀÇ °³¿ä</h2>
-<p>1) °­ÀÇ Á¦¸ñ : Çö±âÁõ¿¡ »ç·ÎÀâÈù È÷Ä¡ÄÛ: È÷Ä¡ÄÛÀÇ ÀÛ°¡·ĞÀ» ´Ù½Ã ¸»ÇÏ´Ù<br><strong><u>2) ÀÏÁ¤ : 2020³â 1¿ù 28ÀÏ(È­)ºÎÅÍ 2¿ù 19ÀÏ(¼ö)±îÁö, ÁÖ2È¸ - È­¿äÀÏ°ú ¼ö¿äÀÏ</u></strong><br><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 1ºÎ °­ÀÇ 19:30 ½ÃÀÛ</strong><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>- 2ºÎ »ó¿µ 21:40 ½ÃÀÛ</strong> (°­ÀÇ ÇØ¼³ÀÛ Áß ÇÑ Æí ¿µÈ­»ó¿µ *ÀÚÀ²Âü¼®)<br><br>3) Àå¼Ò : ¼­¿ï ¼ººÏ±¸ º¸¹®·Î 159, 2Ãş <strong>°ø°£ Çö±âÁõ</strong><br>4) ¼ö°­ÀÎ¿ø : ÃÖ¼Ò 12¸í¿¡¼­ ÃÖ´ë 20¸í<br>5) ¼ö°­´ë»ó : ¿µÈ­ È¤Àº È÷Ä¡ÄÛ¿¡ °ü½ÉÀÖ´Â ´©±¸³ª, ³ªÀÌ ºÒ¹®<br>6) ¼ö°­·á : 15¸¸¿ø<br><br></p>
-<h2>2. °­»ç / <span class="s2">Á¶¹Î¼®<br><br><img src="https://tumblbug-psi.imgix.net/b4572ab4454762ded86a52b210ac79878e26a0da/5db1c777a4e46bb72fef6aef11cb246d5d55be1c/3f1f9fbe8212953634b6751da5262d05d983d691/3b93905a-a0b8-45a8-8602-6ec136b71a08.png?ixlib=rb-1.1.0&amp;w=1240&amp;auto=format%2C%20compress&amp;lossless=true&amp;ch=save-data&amp;s=05c0343ee017275f0109f992e2af1d48"><br></span></h2>
-<p class="p1"><span class="s1">ÇöÀç</span> <span class="s1"><strong>¹Ìµğ¾×Æ®<sup>1</sup></strong>¿¡¼­</span> <span class="s1">´Ù¼öÀÇ</span> <span class="s1">¿µÈ­ÀÌ·Ğ</span> <span class="s1">°­ÀÇ<br><em>(<sup>1</sup>¹Ìµğ¾×Æ® <a href="https://www.mediact.org/web/education/lecture_list.php">https://www.mediact.org/web/education/lecture_list.php</a>)</em></span><span class="s1"><br></span><span class="s1">2015 - 2018 <strong>&lt;</strong></span><strong><span class="s3">¿ì¸®</span> <span class="s3">°çÀÇ</span> <span class="s3">¿µÈ­<sup>2</sup></span><span class="s1">&gt; </span></strong><span class="s3">¿¬Àç <em>(<sup>2</sup>¿ì¸®°çÀÇ ¿µÈ­</em></span><span class="s2"><em>&nbsp;</em><span class="s3"><em><a href="http://bitly.kr/cZ9ZOQMC" target="_blank" rel="noopener">http://bitly.kr/cZ9ZOQMC</a>)</em><br><br></span></span><span class="s2">2019 &lt;</span><span class="s1">µğ¾î</span> <span class="s1">¾Ù¸®ÆİÆ®</span><span class="s2">&gt;(</span><span class="s1">ÀÌÃ¢¹Î</span><span class="s2">) </span><span class="s1">ÇÁ·Îµà¼­<br></span><span class="s1">2017 &lt;</span><span class="s3">ÇÔ¼ºµé</span><span class="s1">&gt;(</span><span class="s3">ÀÌÃ¢¹Î</span><span class="s1">) </span><span class="s3">ÇÁ·Îµà¼­<br><br></span><span class="s1">2015 &lt;</span><span class="s3">Ãã</span><span class="s1">&gt; </span><span class="s3">¿¬Ãâ<br></span><span class="s2">2013 &lt;</span><span class="s1">»ç¹°ÀÇ</span> <span class="s1">¼û°ÜÁø</span> <span class="s1">¿ø¸®</span><span class="s2">&gt; </span><span class="s1">¿¬Ãâ</span></p>
-
+											<div class="storyContent">											
+												${project.story}						
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="ProjectPage__ProjectContentsSubColumn-f3cisk-3 eVgvmn" data-reactid="130">
-								<div class="ProjectPage__SubColumnInner-f3cisk-5 eAojiy" data-reactid="131">
-									<div class="Card-sc-1sgtmvk-0 gBrdMC" data-reactid="132">
-										<div class="RewardCard__RewardCardInner-sc-1u66tc0-1 cUrXrg">
-											<div class="RewardCard__RewardHeader-sc-1u66tc0-2 iynKOC">
-												<span class="RewardCard__PledgeAmount-sc-1u66tc0-3 MLabx">
-													<i class="-o8oGI_QAOKsVIJOUOUmV _1QY7TzdLHKX3-BKPDNNYKF"></i>10¸íÀÌ ¼±ÅÃ
-												</span>
-												<span class="RewardCard__RewardQuantityLimit-sc-1u66tc0-4 mYUqu">
-													<span class="RewardCard__LimitedRewardLabel-sc-1u66tc0-5 hIWEho">10°³ ³²À½</span>
-												</span>
+							<div id="tab3"class="ProjectPage__ProjectContentsMainColumn-f3cisk-2 hzJfoW">
+								<div class="ProjectPage__MainColumnInner-f3cisk-4 kGPPtA">
+									<div>
+										<div class="Card-sc-1sgtmvk-0 gBrdMC">
+											<div class="PolicyCard__PolicyCardInner-sc-1wv4nt7-0 cJHfnu">
+												<div class="PolicyCard__PolicyCardLabel-sc-1wv4nt7-1 inGkRv">ì´ í”„ë¡œì íŠ¸ì˜ í™˜ë¶ˆ ë° êµí™˜ ì •ì±…</div>
+													- í”„ë¡œì íŠ¸ ë§ˆê°ì¼ í›„ì—ëŠ” ì¦‰ì‹œ ì œì‘ ë° ì‹¤í–‰ì— ì°©ìˆ˜í•˜ëŠ” í”„ë¡œì íŠ¸ íŠ¹ì„±ìƒ ë‹¨ìˆœ ë³€ì‹¬ì— ì˜í•œ í›„ì›ê¸ˆ í™˜ë¶ˆì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.
+													- ì˜ˆìƒ ì „ë‹¬ì¼ë¡œë¶€í„° 15ì¼ ì´ìƒ ì„ ë¬¼ ì „ë‹¬ì´ ì´ë¤„ì§€ì§€ ì•Šì„ ê²½ìš°, í™˜ë¶ˆì„ ì›í•˜ì‹œëŠ” ë¶„ë“¤ê»˜ëŠ” ìˆ˜ìˆ˜ë£Œë¥¼ ì œí•œ í›„ì›ê¸ˆì„ í™˜ë¶ˆí•´ ë“œë¦½ë‹ˆë‹¤.
+													(í”Œë«í¼ ìˆ˜ìˆ˜ë£Œ: ëª¨ê¸ˆì•¡ì˜ 5%, ë¶€ê°€ì„¸ ë³„ë„ / ê²°ì œ ìˆ˜ìˆ˜ë£Œ: ê²°ì œ ì„±ê³µì•¡ì˜ 3%, ë¶€ê°€ì„¸ ë³„ë„ )
+													- ì„ ë¬¼ ì „ë‹¬ì„ ìœ„í•œ ë°°ì†¡ì§€ ë° ì„œë² ì´ ë‹µë³€ì€ 2020ë…„ 3ì›” 26ì¼ì— ì¼ê´„ ì·¨í•©í•  ì˜ˆì •ì…ë‹ˆë‹¤. ì´í›„ ë°°ì†¡ì§€ ë³€ê²½ì´ë‚˜ ì„œë² ì´ ë‹µë³€ ë³€ê²½ì„ ì›í•˜ì‹¤ ë•Œì—ëŠ” 'ì°½ì‘ìì—ê²Œ ë¬¸ì˜í•˜ê¸°'ë¡œ ê°œë³„ ë¬¸ì˜í•˜ì…”ì•¼ í•©ë‹ˆë‹¤.
+													
+													- íŒŒì† ë˜ëŠ” ë¶ˆëŸ‰í’ˆ ìˆ˜ë ¹ ì‹œ 7ì¼ ì´ë‚´ë¡œ êµí™˜ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+													- êµí™˜ ë° AS ë¬¸ì˜ëŠ” 'ì°½ì‘ìì—ê²Œ ë¬¸ì˜í•˜ê¸°'ë¡œ ì‹ ì²­í•´ ì£¼ì„¸ìš”.
+													- íŒŒì†ì´ë‚˜ ë¶ˆëŸ‰í’ˆ êµí™˜ì‹œ ë°œìƒí•˜ëŠ” ë¹„ìš©ì€ ì°½ì‘ìê°€ ë¶€ë‹´í•©ë‹ˆë‹¤. ì„ ë¬¼ í™•ì¸ì„ ìœ„í•œ í¬ì¥ í›¼ì† ì™¸ì— ì•„ì´í…œì˜ ê°€ì¹˜ê°€ í›¼ì†ëœ ê²½ìš°ì—ëŠ” êµí™˜ ë° í™˜ë¶ˆì´ ë¶ˆê°€í•©ë‹ˆë‹¤.
+													
+													- í›„ì›ìê°€ ë°°ì†¡ì§€ë¥¼ ì˜ëª» ê¸°ì¬í•˜ê±°ë‚˜ ì°½ì‘ìì—ê²Œ ì‚¬ì „ ê³ ì§€ ì—†ì´ ë°°ì†¡ì§€ë¥¼ ìˆ˜ì •í•˜ì—¬ ë°°ì†¡ì‚¬ê³ ê°€ ë°œìƒí•  ê²½ìš°
+													ì°½ì‘ìëŠ” ìµœëŒ€ 1íšŒ ì¬ë°œì†¡ í•´ ë“œë¦½ë‹ˆë‹¤. ë°°ì†¡ë¹„ ë¶€ë‹´ì€ í›„ì›ìì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+													
+													- ì „ë‹¬ëœ íŒŒì¼ì€ íƒ€ì¸ì—ê²Œ ì–‘ë„ê°€ ê°€ëŠ¥í•©ë‹ˆë‹¤.
 											</div>
-											<div class="RewardCard__RewardContents-sc-1u66tc0-7 jSudED">
-												<div class="RewardCard__RewardMinimumPledgeAmount-sc-1u66tc0-8 kwNvmv">150,000¿ø +</div>
-												<div class="RewardCard__RewardDescription-sc-1u66tc0-9 iwlqIk">'Çö±âÁõ¿¡ »ç·ÎÀâÈù È÷Ä¡ÄÛ: È÷Ä¡ÄÛÀÇ ÀÛ°¡·ĞÀ» ´Ù½Ã ¸»ÇÏ´Ù'¸¦ ¼ö°­ÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù</div>
-											</div>
-											<div class="RewardCard__Items-sc-1u66tc0-10 hOUlxo">
-												<li class="RewardCard__ItemList-sc-1u66tc0-11 jkPMDd">[Çö±âÁõ¿¡ »ç·ÎÀâÈù Çö±âÁõ] ¼ö°­&nbsp;
-													<span>( x 1 )</span>
-												</li>
-											</div>
-											<div class="RewardCard__DeliveryDate-sc-1u66tc0-12 eshybT">
-												<span>¿¹»ó Àü´ŞÀÏ &nbsp;
-													<b>2020³â 1¿ù 28ÀÏ</b>
-												</span>
-											</div>
-											<div class="Divider-sc-17hnup0-0 eUqLBU"></div>
-											<button class="Button-sc-1x93b2b-0 jQspcv">¼±¹° ¼±ÅÃÇÏ°í ¹Ğ¾îÁÖ±â</button>
 										</div>
 									</div>
-									<div class="Rewards-c484ad-0 flLtKW">
+								</div>
+							</div>					
+							<div class="ProjectPage__ProjectContentsSubColumn-f3cisk-3 eVgvmn" data-reactid="130">
+								<div class="ProjectPage__SubColumnInner-f3cisk-5 eAojiy" data-reactid="131">
+									<c:forEach var="reward" items="${reward}">
 										<div class="RewardCard__RewardCardWrapper-sc-1u66tc0-0 dHxsUr">
-											<div class="Card-sc-1sgtmvk-0 dEGWGh">
+											<div class="Card-sc-1sgtmvk-0 gBrdMC" data-reactid="132">
 												<div class="RewardCard__RewardCardInner-sc-1u66tc0-1 cUrXrg">
 													<div class="RewardCard__RewardHeader-sc-1u66tc0-2 iynKOC">
 														<span class="RewardCard__PledgeAmount-sc-1u66tc0-3 MLabx">
-															<i class="-o8oGI_QAOKsVIJOUOUmV _1QY7TzdLHKX3-BKPDNNYKF"></i>10¸íÀÌ ¼±ÅÃ
-														</span>
-														<span class="RewardCard__RewardQuantityLimit-sc-1u66tc0-4 mYUqu">
-															<span class="RewardCard__LimitedRewardLabel-sc-1u66tc0-5 hIWEho">10°³ ³²À½</span>
+															<i class="-o8oGI_QAOKsVIJOUOUmV _1QY7TzdLHKX3-BKPDNNYKF"></i>10ëª…ì´ ì„ íƒ
 														</span>
 													</div>
 													<div class="RewardCard__RewardContents-sc-1u66tc0-7 jSudED">
-														<div class="RewardCard__RewardMinimumPledgeAmount-sc-1u66tc0-8 kwNvmv">150,000¿ø +</div>
-														<div class="RewardCard__RewardDescription-sc-1u66tc0-9 iwlqIk">'Çö±âÁõ¿¡ »ç·ÎÀâÈù È÷Ä¡ÄÛ: È÷Ä¡ÄÛÀÇ ÀÛ°¡·ĞÀ» ´Ù½Ã ¸»ÇÏ´Ù'¸¦ ¼ö°­ÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù</div>
+														<div class="RewardCard__RewardMinimumPledgeAmount-sc-1u66tc0-8 kwNvmv">${reward.reward_goal} +</div>
 													</div>
 													<div class="RewardCard__Items-sc-1u66tc0-10 hOUlxo">
-														<li class="RewardCard__ItemList-sc-1u66tc0-11 jkPMDd">[Çö±âÁõ¿¡ »ç·ÎÀâÈù Çö±âÁõ] ¼ö°­&nbsp;
-															<span>( x 1 )</span>
+														<li class="RewardCard__ItemList-sc-1u66tc0-11 jkPMDd">
+															<span>${reward.item}  ( X${reward.itemcnt})</span>
 														</li>
 													</div>
 													<div class="RewardCard__DeliveryDate-sc-1u66tc0-12 eshybT">
-														<span>¿¹»ó Àü´ŞÀÏ &nbsp;
-															<b>2020³â 1¿ù 28ÀÏ</b>
+														<span>ì˜ˆìƒ ì „ë‹¬ì¼ &nbsp;
+															<b>${reward.reward_date}</b>
 														</span>
 													</div>
-													<div class="Divider-sc-17hnup0-0 eUqLBU"></div>
-													<button class="Button-sc-1x93b2b-0 jQspcv">¼±¹° ¼±ÅÃÇÏ°í ¹Ğ¾îÁÖ±â</button>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="Card-sc-1sgtmvk-0 gBrdMC" data-reactid="132">
-										<div class="RewardCard__RewardCardInner-sc-1u66tc0-1 cUrXrg">
-											<div class="RewardCard__RewardHeader-sc-1u66tc0-2 iynKOC">
-												<span class="RewardCard__PledgeAmount-sc-1u66tc0-3 MLabx">
-													<i class="-o8oGI_QAOKsVIJOUOUmV _1QY7TzdLHKX3-BKPDNNYKF"></i>10¸íÀÌ ¼±ÅÃ
-												</span>
-												<span class="RewardCard__RewardQuantityLimit-sc-1u66tc0-4 mYUqu">
-													<span class="RewardCard__LimitedRewardLabel-sc-1u66tc0-5 hIWEho">10°³ ³²À½</span>
-												</span>
-											</div>
-											<div class="RewardCard__RewardContents-sc-1u66tc0-7 jSudED">
-												<div class="RewardCard__RewardMinimumPledgeAmount-sc-1u66tc0-8 kwNvmv">150,000¿ø +</div>
-												<div class="RewardCard__RewardDescription-sc-1u66tc0-9 iwlqIk">'Çö±âÁõ¿¡ »ç·ÎÀâÈù È÷Ä¡ÄÛ: È÷Ä¡ÄÛÀÇ ÀÛ°¡·ĞÀ» ´Ù½Ã ¸»ÇÏ´Ù'¸¦ ¼ö°­ÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù</div>
-											</div>
-											<div class="RewardCard__Items-sc-1u66tc0-10 hOUlxo">
-												<li class="RewardCard__ItemList-sc-1u66tc0-11 jkPMDd">[Çö±âÁõ¿¡ »ç·ÎÀâÈù Çö±âÁõ] ¼ö°­&nbsp;
-													<span>( x 1 )</span>
-												</li>
-											</div>
-											<div class="RewardCard__DeliveryDate-sc-1u66tc0-12 eshybT">
-												<span>¿¹»ó Àü´ŞÀÏ &nbsp;
-													<b>2020³â 1¿ù 28ÀÏ</b>
-												</span>
-											</div>
-											<div class="Divider-sc-17hnup0-0 eUqLBU"></div>
-											<button class="Button-sc-1x93b2b-0 jQspcv">¼±¹° ¼±ÅÃÇÏ°í ¹Ğ¾îÁÖ±â</button>
-										</div>
-									</div>
+									</c:forEach>
 								</div>
 							</div>
 						</div>
@@ -266,7 +317,36 @@
 		</div>
 	</div>
 </div>
-
-<script type="application/javascript" src="https://d2om2e6rfn032x.cloudfront.net/wpa/bundle.app.1c1246661e6c7f98a34c.js"></script>
-
+	
+<script>
+	$(function() {
+			$('div.ContentsNavigation__NavLeft-mwsx7i-3 a').click(function() {
+				var activeTab = $(this).attr('data-tab');
+				$('div.ContentsNavigation__NavLeft-mwsx7i-3 a').removeClass('current');
+				$('.ProjectPage__ProjectContentsMainColumn-f3cisk-2').removeClass('current');
+				$(this).addClass('current');
+				$('#' + activeTab).addClass('ContentsNavigation__NavItem-mwsx7i-0 current');
+			})
+		});
+	function alllist_show() {
+		      document.getElementById("alllist").style.display = "block";
+		      document.getElementById("createlist").style.display = "none";
+		      document.getElementById("alllistbtn").style="background-color:lightgray;";
+		      document.getElementById("createlistbtn").style="background-color:#f6f5f5;";
+		   }
+	function createlist_show() {
+		      document.getElementById("createlist").style.display = "block";
+		      document.getElementById("alllist").style.display = "none";
+		      document.getElementById("alllistbtn").style="background-color:#f6f5f5";
+		      document.getElementById("createlistbtn").style="background-color:lightgray";
+		   }
+	function story_show() {
+		        document.getElementById("tab1btn").style="color:rgba(0,0,0,1);border-bottom:3px solid rgba(0,0,0,1);padding-bottom:calc(0.5rem - 3px);";
+		        document.getElementById("tab3btn").style="background-color:white;";
+		     }
+	function funding_show() {
+        document.getElementById("tab3btn").style="color:rgba(0,0,0,1);border-bottom:3px solid rgba(0,0,0,1);padding-bottom:calc(0.5rem - 3px);";
+        document.getElementById("tab1btn").style="background-color:white;";
+     }
+</script>	
 </body></html>
