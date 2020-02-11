@@ -138,7 +138,7 @@
 						   role="button" data-toggle="dropdown" aria-haspopup="true"
 						   aria-expanded="false">
 						 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-						 	${loginUser.nic}
+						 	목마른 도영이
 						 </span>
 						 <img class="img-profile" src="../redo/img/avatar_4.png">
 					</a>
