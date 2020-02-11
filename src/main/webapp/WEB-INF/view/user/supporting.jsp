@@ -16,7 +16,7 @@
 
 	<form:form modelAttribute="support" method="post" action="supporting.do" >
 	<form:hidden path="id" value="${loginUser.id}" />
-<%-- 	<form:hidden path="project_num" value="${project.project_num}" /> --%>
+
 	<div>
 			<div
 				class="_13KHfN73YmQgsYHxXvuh_J _1abzWO2yE0ZJ7OiXOf85f5 _4S0ikJ5kL9iaC8TQbNr2J"></div>
@@ -223,6 +223,7 @@
 									
 										</div>
 										<div style="text-align:right" >
+										<input type="hidden" value="${project_num }" name="project_num">
 									<button type="submit" class="_13KHfN73YmQgsYHxXvuh_J _3SbGdzxKM6M_AeOQWLNqks _2-N-uV2y5apkjtxqdVnsop _2rCeEoFeBzvCYn76udqnww"	>
 											<i class="-o8oGI_QAOKsVIJOUOUmV _1QY7TzdLHKX3-BKPDNNYKF"></i>
 											작성완료

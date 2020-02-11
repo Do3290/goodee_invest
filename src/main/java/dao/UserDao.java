@@ -57,16 +57,21 @@ Map<String,Object> param = new HashMap<String,Object>();
 		
 		return sqlSession.getMapper(UserMapper.class).datediff(param);
 	}
-	public void supportwrite(String id, Support support, String address) {
+	
+	
+	public void supportwrite(String id, Support support, String address, Integer project_num) {
 		param.clear();
 		param.put("id",id);
 		param.put("support",support);
+		param.put("project_num",project_num);
 		System.out.println("param" +id);
 		param.put("support_address",address);
 		System.out.println("address"+address);
 		sqlSession.getMapper(UserMapper.class).supportwrite(param);
 	}
 
+	
+	
 	public List<Project> getSupport(String id, Support support, String project_num,Project project, String col, String content) {
 		param.clear();
 		param.put("id",id);
@@ -139,14 +144,29 @@ Map<String,Object> param = new HashMap<String,Object>();
 		param.put("id",id);
 		return sqlSession.getMapper(UserMapper.class).supportDetail(param);
 	}
-	public void updateReward(int support_num) {
-		param.put("support_num",support_num);
+	public void updateReward(int project_num, String id) {
+		param.clear();
+		param.put("project_num", project_num);
+		param.put("id",id);
 		sqlSession.getMapper(UserMapper.class).updateReward(param);
 	}
 	public Support getSupportOne(Support support_num, String id) {
+		param.clear();
 		param.put("support_num", support_num);
 		
 		return sqlSession.getMapper(UserMapper.class).getSupportOne(param);
+	}
+	public List<Project> getsupportUser(int num) {
+		param.clear();
+		param.put("project_num",num);
+		
+		return sqlSession.getMapper(UserMapper.class).getsupportUser(param);
+	}
+	public void giveReward(int project_num, String id) {
+		param.clear();
+		param.put("project_num",project_num);
+		param.put("id",id);
+		sqlSession.getMapper(UserMapper.class).giveReward(param);
 	}
 
 	

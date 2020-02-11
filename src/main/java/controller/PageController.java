@@ -45,17 +45,17 @@ public class PageController {
 	}
 	
 	@RequestMapping("search")
-	public ModelAndView search(String project, String category, String state, Integer rate, String search) {
+	public ModelAndView search(String project, String category, String prostate, Integer rate, String search) {
 		System.out.println(search);
 		List<Project> projectlist;
-		if(project != null && project.equals("end") && category == null && state == null && rate == null){
+		if(project != null && project.equals("end") && category == null && prostate == null && rate == null){
 			projectlist = service.endprojectlist();
-		}else if(project != null && project.equals("new") && category == null && state == null && rate == null) {
+		}else if(project != null && project.equals("new") && category == null && prostate == null && rate == null) {
 			projectlist = service.newprojectlist();
-		}else if(project != null && project.equals("pop") && category == null && state == null && rate == null) {
+		}else if(project != null && project.equals("pop") && category == null && prostate == null && rate == null) {
 			projectlist = service.bestprojectlist();
-		}else if(category != null || state != null || rate != null) {
-			projectlist = service.searchlist(category, state, rate);
+		}else if(category != null || prostate != null || rate != null) {
+			projectlist = service.searchlist(category, prostate, rate);
 		}else if(search != null && !search.trim().equals("")) {
 			projectlist = service.searchname(search);
 		}

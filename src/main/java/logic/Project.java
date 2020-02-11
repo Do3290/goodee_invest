@@ -44,8 +44,15 @@ public class Project {
    private String tel;
    private String name;
    private int datediff;
+   private String nic;
    
    
+public String getNic() {
+	return nic;
+}
+public void setNic(String nic) {
+	this.nic = nic;
+}
 public int getPop() {
 	return pop;
 }
@@ -237,6 +244,7 @@ public String toString() {
 			+ ", reward_goal=" + reward_goal + ", reward_date=" + reward_date + ", pop=" + pop + ", date=" + date
 			+ ", supportcnt=" + supportcnt + ", reward_state=" + reward_state + ", support_money=" + support_money
 			+ ", support_num=" + support_num + ", support_address=" + support_address + ", tel=" + tel + ", name="
-			+ name + ", datediff=" + datediff + "]";
-}    
+			+ name + ", datediff=" + datediff + ", nic=" + nic + "]";
+}
+   
 }

@@ -12,6 +12,8 @@
 <body>
 	<div>
 		<div>
+		<input type="hidden" value="${supportDetail.id }" name="id">
+							<input type= "hidden" value="${supportDetail.project_num }" name = "project_num">
 			<h3
 				class="_13KHfN73YmQgsYHxXvuh_J _2XNIh_QZv4rPkHih1iN3Yt _3o6iE1ko5_AeTlpXebXsBb">
 				<div class="_13KHfN73YmQgsYHxXvuh_J _1WARcEqqT_Pem8leg2dkMj">°áÁ¦
@@ -140,10 +142,11 @@
 								style="cursor: pointer;">
 								
 								
-								<form action = "getReward.do" method = "post">
+									<form action = "getReward.do" method = "post">
 								<div 
 									class="_2dKJQZGqcB1T0xe0DzKY0H _152MAijd_UogerBKCVqZR_ _1lLHKI5v9AoCyeggtffvGZ">
-									<input type= "hidden" value="${supportDetail.support_num }"name = "support_num">									
+									<input type= "hidden" value="${supportDetail.support_num }"name = "support_num">
+									<input type= "hidden" value="${supportDetail.project_num}"name = "project_num">									
 									<div style = "width:100%; ">
 										<c:if test="${supportDetail.reward_state eq 0}">
 										<b>&nbsp;</b>

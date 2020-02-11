@@ -112,7 +112,7 @@
 <div class="_3ngyn_oTUFrIxTcOgGouoL">
 <div class="_3560uqFYsEspUH6-ImjYr2">
 <div class="_8j9TZHp6qi1mJbK4MQFDM" style ="width: 250px;" >
-<img alt="보드게임 1945 : 반민족행위특별조사위원회" class="_13KHfN73YmQgsYHxXvuh_J _2H5AJMZT-xLtuIvR5jP8rd _2-N-uV2y5apkjtxqdVnsop _2aquK6B3D0GYX7zQT4_IR7" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/77600238658eba16e6a83ce15d079f85381bc4db/7ce5c85130037b1c9b4ee0a3528233d4925c3da4/5f3bbc3d-c103-4214-9f67-a09aefcb32a9.jpg?ixlib=rb-1.1.0&amp;h=240&amp;w=320&amp;fit=crop&amp;s=e02689106b612a5444ac87c7d3e8956b"></div>
+<img src="../page/file/${supportlist.main_imageurl }" class="_13KHfN73YmQgsYHxXvuh_J _2H5AJMZT-xLtuIvR5jP8rd _2-N-uV2y5apkjtxqdVnsop _2aquK6B3D0GYX7zQT4_IR7" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/77600238658eba16e6a83ce15d079f85381bc4db/7ce5c85130037b1c9b4ee0a3528233d4925c3da4/5f3bbc3d-c103-4214-9f67-a09aefcb32a9.jpg?ixlib=rb-1.1.0&amp;h=240&amp;w=320&amp;fit=crop&amp;s=e02689106b612a5444ac87c7d3e8956b"></div>
 <div class="_2rdXpEjSOLwDFilZKJUHe5"><div>
 <c:if test = '${supportlist.datediff>0 }'>
 <label class="_13KHfN73YmQgsYHxXvuh_J _1DLNFgQRrQNEosKFB0zOK5 _3sFSjAZS4gQdCAyN3OfyFG _1Qdv504-1XMeYXZyb0xQZT _3D9sfZXrWd8it3eUCuCTc8 _2BIT5x1MzYkxpZlDSFDBBf">펀딩 진행중</label></c:if>
