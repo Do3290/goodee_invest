@@ -133,7 +133,7 @@
 <div class="b-project-card">
   <figure class="b-project-card__head">
     <a class="b-project-card__head__link"
-     href="../page/info.do">
+     href="../page/info.do?num=${project.project_num}">
       <div class="b-project-card__head__link__inner">
         <div class="b-project-card__head__filter"></div>
         <img src="https://d1pqmsyqo4bi9.cloudfront.net/assets/project_default_original.png"
@@ -146,7 +146,7 @@
     <h3 class="b-project-card__title">
       <a href="/edit-project/f4fabf7d-d8ab-4b51-998b-d7a536b65f1f/sections/project-outline" class="[ yoke yoke--theme_light ]"></a>
     </h3>
-    <input type= "hidden" value="${project.subject_num }" name= project_num>
+   <%--  <input type= "hidden" value="${project.subject_num }" name= "project_num"> --%>
     <p class="b-project-card__creator">
       ${project.subject }
     </p>

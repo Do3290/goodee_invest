@@ -1,5 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,10 +40,34 @@
 		<input type="radio" name="pos" id="pos3">
 		<input type="radio" name="pos" id="pos4">
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li>
+				<a href="info.do?num=${bestprojectlist[0].project_num}"><img src="file/${bestprojectlist[0].banner_imageurl}" style="width: 100%; height: 100%;"></a>
+				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;" >
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[0].subject}<br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[0].summary}</div>
+				</div>
+			</li>
+			<li>
+				<a href="info.do?num=${bestprojectlist[1].project_num}"><img src="file/${bestprojectlist[1].banner_imageurl}" style="width: 100%; height: 100%;"></a>
+				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;">
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[1].subject}<br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[1].summary}</div>
+				</div>
+			</li>
+			<li>
+				<img src="file/${bestprojectlist[2].banner_imageurl}" style="width: 100%; height: 100%;">
+				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;">
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[2].subject}<br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[2].summary}</div>
+				</div>	
+			</li>
+			<li>
+				<img src="file/${bestprojectlist[3].banner_imageurl}" style="width: 100%; height: 100%;">
+				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;">
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[3].subject}<br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[3].summary}</div>
+				</div>
+			</li>
 		</ul>
 		<p class="pos">
 			<label for="pos1"></label>
@@ -53,7 +81,7 @@
 			<div class="FrontPage__ProjectsCarousel-sc-1wto2iu-1 ckBjxy">
 				<div class="Carousel__CarouselHeader-sc-72guw4-1 DOQRx">
 					<span class="Carousel__CarouselTitle-sc-72guw4-2 cnLQNY">
-						<a class="Carousel__Link-sc-72guw4-0 kCEWtQ" href="/discover?sort=popular&amp;editorPick=1&amp;ongoing=onGoing">ÀÎ±â ÃßÃµ ÇÁ·ÎÁ§Æ®
+						<a class="Carousel__Link-sc-72guw4-0 kCEWtQ" href="search.do?project=pop">ì¸ê¸° ì¶”ì²œ í”„ë¡œì íŠ¸
 							<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
 								<polyline points="9 18 15 12 9 6"></polyline>
 							</svg>
@@ -72,115 +100,116 @@
 					<div style="overflow: hidden; position: relative; width: 5400px;">
 						<div class="Carousel__CarouselContents-sc-72guw4-4 ibmRNI" data-index="0" style="float: left; width: 1080px; position: relative; transition-property: transform; left: 0px; transition-duration: 300ms; transform: translate(0px, 0px) translateZ(0px);" id="bestproject">
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/740dacc152c154221b8205d4ba9ba977985f4aa0/7f26e73a37c2b529f14d1206f7173b2143778900/e4c4a210-823f-475b-b2fb-01f784c8c8b3.jpeg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=a94f0a56270db1ab7371bc32c0653e68" alt="Ä«µåÄ¸ÅÍ Ã¼¸® Å¬¸®¾îÄ«µåÆí ±ÂÁî ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[0].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[0].main_imageurl}" alt="ì¹´ë“œìº¡í„° ì²´ë¦¬ í´ë¦¬ì–´ì¹´ë“œí¸ êµ¿ì¦ˆ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">Ä«µåÄ¸ÅÍ Ã¼¸® Å¬¸®¾îÄ«µåÆí ±ÂÁî</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[0].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">¾Æ¸£´©º¸</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[0].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect><rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[0].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">30</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${bestprojectlist[0].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">10,002,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">100%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[0].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[0].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/59e5c993461f849dfffc090cac99ffce50038bac/f8af948e90cbb7d5a354b996269370247b3a0e68/49991651-f75c-4bf2-b007-0de751a8e328.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=7a98675f68f6a33f29d693bbdffa370a" alt="ÇÑ±¹ÀÇ ÆÇÅ¸Áö ¸íÀÛ <ÇÏ¾á ´Á´ëµé> ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[1].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[1].main_imageurl}" alt="í•œêµ­ì˜ íŒíƒ€ì§€ ëª…ì‘ <í•˜ì–€ ëŠ‘ëŒ€ë“¤> ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">ÇÑ±¹ÀÇ ÆÇÅ¸Áö ¸íÀÛ &lt;ÇÏ¾á ´Á´ëµé&gt;</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[1].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">Á¦¿ì¹Ìµğ¾î</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[1].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[1].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">25</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">25</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">5,046,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">100%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[1].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[1].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/iamstillokay?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/ÀÎ±âÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/b4572ab4454762ded86a52b210ac79878e26a0da/caa649498f7d79142656da22b98357b2c71ae139/29f445526f68ea853c7260bb5fb10e134365014d/39f2c427-60e2-41a8-858c-4693589d32d6.png?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=324bc46b6b74020dfbbfe03d6b9b6294" alt="[eBook] ¼ºÈñ·Õ °í¹ß Á÷ÀåÀÎÀÇ 5³â ½ÇÆĞ±â ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[2].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[2].main_imageurl}" alt="[eBook] ì„±í¬ë¡± ê³ ë°œ ì§ì¥ì¸ì˜ 5ë…„ ì‹¤íŒ¨ê¸° ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">[eBook] ¼ºÈñ·Õ °í¹ß Á÷ÀåÀÎÀÇ 5³â ½ÇÆĞ±â</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[2].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">½Çºñ¾Æ</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[2].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[2].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">52</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">52</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">2,921,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">292%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[2].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[2].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/helterskelter?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/ÀÎ±âÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/b4572ab4454762ded86a52b210ac79878e26a0da/3ade3b098b2ff9e757bae3e290e4c4497f0c40f7/b8608aa7ebd610e47111d78a1a9e2eb859a97bc8/318e8819-38b3-46da-a31f-1a37c445226c.jpeg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=f4dc899887350051a68e2d3ec22a0680" alt="¿ÀÄ«ÀÚÅ° ±³ÄÚÀÇ ¡ºÇïÅÍ ½ºÄÌÅÍ¡»(2003) Ãâ°£ ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[3].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[3].main_imageurl}" alt="ì˜¤ì¹´ìí‚¤ êµì½”ì˜ ã€í—¬í„° ìŠ¤ì¼ˆí„°ã€(2003) ì¶œê°„ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">¿ÀÄ«ÀÚÅ° ±³ÄÚÀÇ ¡ºÇïÅÍ ½ºÄÌÅÍ¡»(2003) Ãâ°£</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[3].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">goat</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[3].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[3].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">31</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">31</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">9,627,200¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">160%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[3].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[3].pop}%</span>
 											</div>
 										</div>
 									</div>
@@ -189,116 +218,116 @@
 						</div>
 						<div class="Carousel__CarouselContents-sc-72guw4-4 ibmRNI" data-index="1" style="float: left; width: 1080px; position: relative; transition-property: transform; left: -1080px; transition-duration: 300ms; transform: translate(1080px, 0px) translateZ(0px);" id="bestproject2">
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/sticky?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/ÀÎ±âÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/7a5952f3d9162fe34bfe84c8f3c10d573ed69b71/d936c03fd6cec1aff14f83093fb5425c398efa5b/d70af64a-caad-4a06-b935-7144ae1bcc59.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=1e0ffd8ab4e33f5e5ecc999463e6a4ee" alt="½ºÆ¼Ä¿ ±ÂÁî Á¦ÀÛ, ²À Ã¼Å©ÇØ¾ß ÇÏ´Â 3°¡Áö ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[4].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[4].main_imageurl}" alt="ìŠ¤í‹°ì»¤ êµ¿ì¦ˆ ì œì‘, ê¼­ ì²´í¬í•´ì•¼ í•˜ëŠ” 3ê°€ì§€ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">½ºÆ¼Ä¿ ±ÂÁî Á¦ÀÛ, ²À Ã¼Å©ÇØ¾ß ÇÏ´Â 3°¡Áö</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[4].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">SDBX</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[4].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[4].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">22</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">22</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">23,125,500¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">1541%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[4].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[4].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/monsterofwest?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/ÀÎ±âÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/283b06b41dd353ee03c78335601e30fd978302a0/6c445a87ce17ab65dad7291f724cf66fc77d49d7/958963ee-ec66-479a-ba42-12446feb3ff9.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=6652c03fbdfd0479d986e7df322eba98" alt="È¯»óÀÇ µ¿¹°µé, ´Ù ¸ğ¿©! <¼¼°è±«¹°¹é°ú> - ¼­¾çÆí ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[5].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[5].main_imageurl}" alt="í™˜ìƒì˜ ë™ë¬¼ë“¤, ë‹¤ ëª¨ì—¬! <ì„¸ê³„ê´´ë¬¼ë°±ê³¼> - ì„œì–‘í¸ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">È¯»óÀÇ µ¿¹°µé, ´Ù ¸ğ¿©! &lt;¼¼°è±«¹°¹é°ú&gt; - ¼­¾çÆí</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[5].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">ÇÏÄí³ª¸¶Å¸Å¸ ÃâÆÇ»ç</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[5].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[5].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">48</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">48</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">12,054,600¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">401%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[5].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[5].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/steak2?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/ÀÎ±âÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/b4572ab4454762ded86a52b210ac79878e26a0da/c23da715695415990bdc3cecaaedc661b6cb1e9b/207471c9de6e4825ef20e6e5b9ae4e6b430af51e/7e87b766-bc3b-415f-bb46-382d0bb354d3.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=916e830b612a5ba6347ac603d389fde5" alt="À°ÁúÀº ºÎµå·´°Ô, Ç³¹Ì´Â ÁøÇÏ°Ô! ¿ÍÁî³ªº¸ÀÌÀÇ ¼÷¼º½ºÅ×ÀÌÅ© ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[6].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[6].main_imageurl}" alt="ìœ¡ì§ˆì€ ë¶€ë“œëŸ½ê²Œ, í’ë¯¸ëŠ” ì§„í•˜ê²Œ! ì™€ì¦ˆë‚˜ë³´ì´ì˜ ìˆ™ì„±ìŠ¤í…Œì´í¬ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">À°ÁúÀº ºÎµå·´°Ô, Ç³¹Ì´Â ÁøÇÏ°Ô! ¿ÍÁî³ªº¸ÀÌÀÇ ¼÷¼º½ºÅ×ÀÌÅ©</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[6].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">¿ÍÁî³ªº¸ÀÌ Huasna Boy</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[6].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[6].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">9</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">9</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">4,897,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">489%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[6].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[6].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/knightrun?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/ÀÎ±âÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/690c9f262a25131d07655e5589af183e6e51bf02/a275dfa1279aa9e9dbce881486f2fd2bbfc207d7/4aa3005d51a923da57adf07442b15835188374ed/3f8ea2ba-4444-4c33-9477-96edd85ed984.png?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=1c9f3cf6fa9766fe8786587e73b9bc33" alt="³ªÀÌÆ®·± 10ÁÖ³â ÇåÁ¤ ¸ğ¹ÙÀÏ °ÔÀÓ &quot;³ªÀÌÆ®·±:·¹ÄÜÅ°½ºÅ¸&quot; ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${bestprojectlist[7].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${bestprojectlist[7].main_imageurl}" alt="ë‚˜ì´íŠ¸ëŸ° 10ì£¼ë…„ í—Œì • ëª¨ë°”ì¼ ê²Œì„ &quot;ë‚˜ì´íŠ¸ëŸ°:ë ˆì½˜í‚¤ìŠ¤íƒ€&quot; ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">³ªÀÌÆ®·± 10ÁÖ³â ÇåÁ¤ ¸ğ¹ÙÀÏ °ÔÀÓ "³ªÀÌÆ®·±:·¹ÄÜÅ°½ºÅ¸"</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[7].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">AKA STUDIO</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[7].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${bestprojectlist[7].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">32</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">32</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">141,537,500¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">707%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj"><fmt:formatNumber value="${bestprojectlist[7].support_money}" pattern="#,###" />ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${bestprojectlist[7].pop}%</span>
 											</div>
 										</div>
 									</div>
@@ -311,7 +340,7 @@
 			<div class="FrontPage__ProjectsCarousel-sc-1wto2iu-1 ckBjxy">
 				<div class="Carousel__CarouselHeader-sc-72guw4-1 DOQRx">
 					<span class="Carousel__CarouselTitle-sc-72guw4-2 cnLQNY">
-						<a class="Carousel__Link-sc-72guw4-0 kCEWtQ" href="/discover?minAchieveRate=75&amp;maxAchieveRate=99&amp;sort=endedAt&amp;editorPick=1&amp;ongoing=onGoing">¸¶°¨ ÀÓ¹Ú ÇÁ·ÎÁ§Æ®
+						<a class="Carousel__Link-sc-72guw4-0 kCEWtQ" href="search.do?project=end">ë§ˆê° ì„ë°• í”„ë¡œì íŠ¸
 							<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
 								<polyline points="9 18 15 12 9 6"></polyline>
 							</svg>
@@ -330,116 +359,116 @@
 					<div style="overflow: hidden; position: relative; width: 2160px;">
 						<div class="Carousel__CarouselContents-sc-72guw4-4 ibmRNI" data-index="0" style="float: left; width: 1080px; position: relative; transition-property: transform; left: 0px; transition-duration: 300ms; transform: translate(0px, 0px) translateZ(0px);" id="endingproject">
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/ckasrai?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/690c9f262a25131d07655e5589af183e6e51bf02/dd3c539d0cbd6973045c58e90f76f0961c6dc928/d903ec42464bd15e0ee80bda8e86968b5d6b242b/99ca4b48-df40-43fa-8bd3-552ce075e8ca.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=2da80ea5037a36cf428ad5cc32bfb9ce" alt="°ÅºÎÇÒ ¼ö ¾ø´Â ¿ì¸®ÀÇ ÀüÅë µğÀúÆ®. ½ºÅä¸®ÅÚ¸µ ÄÃ·¯¸µ ºÏ ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[0].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[0].main_imageurl}" alt="ê±°ë¶€í•  ìˆ˜ ì—†ëŠ” ìš°ë¦¬ì˜ ì „í†µ ë””ì €íŠ¸. ìŠ¤í† ë¦¬í…”ë§ ì»¬ëŸ¬ë§ ë¶ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">°ÅºÎÇÒ ¼ö ¾ø´Â ¿ì¸®ÀÇ ÀüÅë µğÀúÆ®. ½ºÅä¸®ÅÚ¸µ ÄÃ·¯¸µ ºÏ</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[0].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">¾Æ½º¶óÀÌ</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[0].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="92%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[0].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">3</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[0].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">926,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">92%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[0].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[0].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/herenthere2019?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/827e5110790b5b575f8c25a168be62f3a18b6691/89aad0dcd56ffd09e679e679f281ad18638379cf/c49913e6-cf63-419a-9da2-d8a927ff7a3e.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=730be8d1f334f3e0357ec314f1f2db67" alt="´ç½ÅÀÇ ÀÏ»óÀ» Ã¤¿ö³ª°¡´Â 'ÀÏ»ó º¸°üÇÔ' ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[1].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[1].main_imageurl}" alt="ë‹¹ì‹ ì˜ ì¼ìƒì„ ì±„ì›Œë‚˜ê°€ëŠ” 'ì¼ìƒ ë³´ê´€í•¨' ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">´ç½ÅÀÇ ÀÏ»óÀ» Ã¤¿ö³ª°¡´Â 'ÀÏ»ó º¸°üÇÔ'</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[1].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">È÷¾ó¾Øµ¥¾ó</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[1].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="88%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[1].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">4</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[1].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">1,762,500¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">88%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[1].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[1].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/raonbirthflower01?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/690c9f262a25131d07655e5589af183e6e51bf02/9baa54f02e034bfff805bc3ece0c9347c3d9789d/ef54b8678bc89647314338fd7074598d95e82dea/4bfebd03-d30a-4ed2-8396-cd9b1b826ba5.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=82772ce0a4a0b50084ec4a983ebaff58" alt="ºû³ª´Â ´ç½ÅÀÇ ´Ş, <12´Ş Åº»ıÈ­ ¹îÁö> 1Åº ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[2].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[2].main_imageurl}" alt="ë¹›ë‚˜ëŠ” ë‹¹ì‹ ì˜ ë‹¬, <12ë‹¬ íƒ„ìƒí™” ë±ƒì§€> 1íƒ„ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">ºû³ª´Â ´ç½ÅÀÇ ´Ş, &lt;12´Ş Åº»ıÈ­ ¹îÁö&gt; 1Åº</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[2].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">¶ó¿Â(RaOn)</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[2].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="96%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[2].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">7</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[2].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">3,368,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">96%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[2].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[2].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/naamezip_yangmal?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/6e9a642e6e4d5d647835e62e1f0158aec00ba4ff/e75c0e18b52b798f4f3b36024ff955df585d3947/d9943731eae58cec45b7a2b10e309853920a50e6/de698591-0e09-47c9-9457-947a03b27834.png?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=48426f1be08730e4760185717a0416de" alt="³²ÀÇÁı¿¡ ³î·¯°¥ ¶§ ½Å°Ô µÉ ¾ç¸» ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[3].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[3].main_imageurl}" alt="ë‚¨ì˜ì§‘ì— ë†€ëŸ¬ê°ˆ ë•Œ ì‹ ê²Œ ë  ì–‘ë§ ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">³²ÀÇÁı¿¡ ³î·¯°¥ ¶§ ½Å°Ô µÉ ¾ç¸»</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[3].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">³²ÀÇÁı</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[3].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="86%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[3].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">8</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[3].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">865,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">86%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[3].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[3].pop}%</span>
 											</div>
 										</div>
 									</div>
@@ -448,116 +477,116 @@
 						</div>
 						<div class="Carousel__CarouselContents-sc-72guw4-4 ibmRNI" data-index="1" style="float: left; width: 1080px; position: relative; transition-property: transform; left: -1080px; transition-duration: 300ms; transform: translate(1080px, 0px) translateZ(0px);" id="endingproject2">
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/endingcredit_5?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/59e4705fa23235cff63a8ffd4eced13035809d9a/f730bd12dcaa374a19d198bfb8dc1ddbed5db820/ea86813cb6304c0524586cf4c6cbec44a3827778/f1ea84a0-888b-4243-a54a-2fb6da6cc1c5.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=4c41c9b62fa94660c2ef687b27ecda01" alt="´ëÇĞ»ı µ¶¸³ ¿µÈ­ÀâÁö '¿£µùÅ©·¹µ÷' 5È£, <°ø°£> ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[4].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[4].main_imageurl}" alt="ëŒ€í•™ìƒ ë…ë¦½ ì˜í™”ì¡ì§€ 'ì—”ë”©í¬ë ˆë”§' 5í˜¸, <ê³µê°„> ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">´ëÇĞ»ı µ¶¸³ ¿µÈ­ÀâÁö '¿£µùÅ©·¹µ÷' 5È£, &lt;°ø°£&gt;</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[4].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">¿£µùÅ©·¹µ÷</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[4].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="82%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[4].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">10</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[4].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">989,500¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">82%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[4].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[4].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/makewaves?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/1e6433d024f300eddac76ac30a14a3b2d24fce3d/9d2d5ae582341893782aaf3ea08b2646f89171e1/50a49b2c-5dad-49d4-956c-3c6ec2bdf1ba.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=170ad7d3d3a349a0bb46cd92208e6ada" alt="¼ö¿µÀ» ¹è¿öº¼±î¿ä? »õ¼ö¸ğ¿Í ¼ö¿µÃ¹³¯ÀÏ±â ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[5].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[5].main_imageurl}" alt="ìˆ˜ì˜ì„ ë°°ì›Œë³¼ê¹Œìš”? ìƒˆìˆ˜ëª¨ì™€ ìˆ˜ì˜ì²«ë‚ ì¼ê¸° ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">¼ö¿µÀ» ¹è¿öº¼±î¿ä? »õ¼ö¸ğ¿Í ¼ö¿µÃ¹³¯ÀÏ±â</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[5].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">Ç³ÆÄ¸Ş¹Ì</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[5].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="75%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[5].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">19</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[5].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">488,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">75%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[5].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[5].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/choedolee?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/690c9f262a25131d07655e5589af183e6e51bf02/44a0b5b2e8a3460b501b9adbf5ccfb5d2a6eef21/c64ccb8a2bb25bab9af51e6408e868fdaaf8bfc2/ba4de3e2-95a5-45ad-b6f5-4f3472d3f6e9.png?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=29d6a5a29e141d4960cfc58438d4cae7" alt="Ã³µ¹ÀÌ´Â Ã³µ¹Áö ¾Ê¾Ò´Ù°í ÇØ¿ä ±ÙÈ² ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[6].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[6].main_imageurl}" alt="ì²˜ëŒì´ëŠ” ì²˜ëŒì§€ ì•Šì•˜ë‹¤ê³  í•´ìš” ê·¼í™© ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">Ã³µ¹ÀÌ´Â Ã³µ¹Áö ¾Ê¾Ò´Ù°í ÇØ¿ä ±ÙÈ²</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[6].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">(ÁÖ)ÄÚ±ÛÇÃ·¡´Ö</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[6].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="84%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[6].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">25</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[6].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">8,476,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">84%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[6].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[6].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/therepublicofyoung?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/¼º°øÀÓ¹Ú">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/690c9f262a25131d07655e5589af183e6e51bf02/f5c730de92eece700a116495082d993fa7ac1c33/e7380dc9cdf6869cba0c1a6a14f06ae8fa34bdc1/57c07aa6-d1af-4aba-b8ae-aee1e91a29d9.png?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=fd49e8a18c89f633a640446c16d6987d" alt="¼Ò¼Ó°¨À» ¸¸µé±â À§ÇÑ ³ª¶ó, '¿µÈ­±¹' ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${endprojectlist[7].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${endprojectlist[7].main_imageurl}" alt="ì†Œì†ê°ì„ ë§Œë“¤ê¸° ìœ„í•œ ë‚˜ë¼, 'ì˜í™”êµ­' ì´ë¯¸ì§€">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">¼Ò¼Ó°¨À» ¸¸µé±â À§ÇÑ ³ª¶ó, '¿µÈ­±¹'</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[7].summary}</h1>
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">³ëÁö¿ø / NCK</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[7].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="95%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${endprojectlist[7].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">31</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${endprojectlist[7].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">285,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">95%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${endprojectlist[7].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${endprojectlist[7].pop}%</span>
 											</div>
 										</div>
 									</div>
@@ -570,7 +599,7 @@
 			<div class="FrontPage__ProjectsCarousel-sc-1wto2iu-1 ckBjxy">
 				<div class="Carousel__CarouselHeader-sc-72guw4-1 DOQRx">
 					<span class="Carousel__CarouselTitle-sc-72guw4-2 cnLQNY">
-						<a class="Carousel__Link-sc-72guw4-0 kCEWtQ" href="/discover?sort=publishedAt&amp;editorPick=1&amp;ongoing=onGoing">½Å±Ô ÃßÃµ ÇÁ·ÎÁ§Æ®
+						<a class="Carousel__Link-sc-72guw4-0 kCEWtQ" href="search.do?project=new">ì‹ ê·œ ì¶”ì²œ í”„ë¡œì íŠ¸
 							<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
 								<polyline points="9 18 15 12 9 6"></polyline>
 							</svg>
@@ -589,116 +618,116 @@
 					<div style="overflow: hidden; position: relative; width: 5400px;">
 						<div class="Carousel__CarouselContents-sc-72guw4-4 ibmRNI" data-index="0" style="float: left; width: 1080px; position: relative; transition-property: transform; left: 0px; transition-duration: 300ms; transform: translate(0px, 0px) translateZ(0px);" id="newproject">
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/1312658?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/ad9c41d87d49ed417795ae86cca8297cc938c844/949efd794c293368af7440a55d3660a38331a3b2/313f2796-d990-4c63-badd-1a910edcc21a.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=cd537790f9944f9a5346565f7ab3142b" alt="ÁøÂ¥ ºñ´Ï°¡ ³ªÅ¸³µ´Ù! ºñ´Ï+¸ÓÇÁ¸¦ µ¿½Ã¿¡[ÅõÀÎ¿ø¸ÖÆ¼ÇÁ] ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[0].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[0].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">ÁøÂ¥ ºñ´Ï°¡ ³ªÅ¸³µ´Ù! ºñ´Ï+¸ÓÇÁ¸¦ µ¿½Ã¿¡[ÅõÀÎ¿ø¸ÖÆ¼ÇÁ]</h1>
-											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">(ÁÖ)ÇÏÀÌÃ÷</p>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[0].summary}</h1> 
+											</div> 
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[0].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="0%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[0].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">11</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[0].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">0¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">0%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[0].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[0].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/whitewolves?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/59e5c993461f849dfffc090cac99ffce50038bac/f8af948e90cbb7d5a354b996269370247b3a0e68/49991651-f75c-4bf2-b007-0de751a8e328.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=7a98675f68f6a33f29d693bbdffa370a" alt="ÇÑ±¹ÀÇ ÆÇÅ¸Áö ¸íÀÛ <ÇÏ¾á ´Á´ëµé> ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[1].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[1].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">ÇÑ±¹ÀÇ ÆÇÅ¸Áö ¸íÀÛ &lt;ÇÏ¾á ´Á´ëµé&gt;</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[1].summary}</h1> 
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">Á¦¿ì¹Ìµğ¾î</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[1].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[1].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">25</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[1].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">5,046,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">100%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[1].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[1].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/cardcaptor?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/740dacc152c154221b8205d4ba9ba977985f4aa0/7f26e73a37c2b529f14d1206f7173b2143778900/e4c4a210-823f-475b-b2fb-01f784c8c8b3.jpeg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=a94f0a56270db1ab7371bc32c0653e68" alt="Ä«µåÄ¸ÅÍ Ã¼¸® Å¬¸®¾îÄ«µåÆí ±ÂÁî ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[2].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[2].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">Ä«µåÄ¸ÅÍ Ã¼¸® Å¬¸®¾îÄ«µåÆí ±ÂÁî</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[2].summary}</h1> 
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">¾Æ¸£´©º¸</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[2].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[2].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">30</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[2].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">10,002,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">100%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[2].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[2].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/pxk_34?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/44632b0d7a905326c04de56c570ab922dfcae76e/86399e0deef22c27d1337048ad88e88f792c2bbb/74385d6d-6c6b-488b-942c-4e03b3dab4d6.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=ccefb56bd155370e439737374ddb1385" alt="·¹ÁøÄÚ¹Í½º À¥Å÷ <¹Ú¹è¿ìX±è³²ÆÒ> ´ÜÇàº» 3~4±Ç Á¦ÀÛ ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[3].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[3].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">·¹ÁøÄÚ¹Í½º À¥Å÷ &lt;¹Ú¹è¿ìX±è³²ÆÒ&gt; ´ÜÇàº» 3~4±Ç Á¦ÀÛ</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[3].summary}</h1> 
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">ÁÖ½ÄÈ¸»ç ¿µÄÄ</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[3].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="20%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[3].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">33</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[3].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">1,235,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">20%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[3].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[3].pop}%</span>
 											</div>
 										</div>
 									</div>
@@ -707,116 +736,116 @@
 						</div>
 						<div class="Carousel__CarouselContents-sc-72guw4-4 ibmRNI" data-index="1" style="float: left; width: 1080px; position: relative; transition-property: transform; left: -1080px; transition-duration: 300ms; transform: translate(1080px, 0px) translateZ(0px);" id="newproject2">
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/fromjobseeker_tojobseeker?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/665b4a21adedd7fb5f3a2f61c4e2dc944b85d08a/9a69d767188154bf3dad5185971ca7cd434e4876/5e113807-58bd-4329-9fd4-b81851ae1bc1.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=d7533805d7cd04d7e7a99627539d70ba" alt="ÃëÁØ»ıÀÌ¾ú´ø ³»°¡, ÃëÁØ»ıµé¿¡°Ô ¼±¹°ÇÏ´Â&quot;ÀÏ·¯½ºÆ® ±ÂÁî&quot; ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[4].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[4].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">ÃëÁØ»ıÀÌ¾ú´ø ³»°¡, ÃëÁØ»ıµé¿¡°Ô ¼±¹°ÇÏ´Â"ÀÏ·¯½ºÆ® ±ÂÁî"</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[4].summary}</h1> 
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">Ãë»ÇÇÑ Çï·¹´Ï</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[4].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="48%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[4].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">40</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[4].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">242,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">48%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[4].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[4].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/ari?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/b4572ab4454762ded86a52b210ac79878e26a0da/7f61e900bd55545ab02dc7fab282d554986ec578/690e97bf2ccf2a73975afa3f6cdac2b0e230faf2/7df49797-c5b8-46f6-a86c-2d6d2c9db52b.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=b5fca7a1a548c131312580c81089858d" alt="¿ÀÄ«¸®´Ï½ºÆ® ¾Æ¸®ÀÇ Ã¹ Á¤±Ô¾Ù¹ü ¹ß¸Å ¹× ¼îÄÉÀÌ½º ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[5].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[5].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">¿ÀÄ«¸®´Ï½ºÆ® ¾Æ¸®ÀÇ Ã¹ Á¤±Ô¾Ù¹ü ¹ß¸Å ¹× ¼îÄÉÀÌ½º</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[5].summary}</h1> 
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">¾Æ¸®</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[5].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="19%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[5].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">28</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[5].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">990,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">19%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[5].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[5].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/iamstillokay?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/b4572ab4454762ded86a52b210ac79878e26a0da/caa649498f7d79142656da22b98357b2c71ae139/29f445526f68ea853c7260bb5fb10e134365014d/39f2c427-60e2-41a8-858c-4693589d32d6.png?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=324bc46b6b74020dfbbfe03d6b9b6294" alt="[eBook] ¼ºÈñ·Õ °í¹ß Á÷ÀåÀÎÀÇ 5³â ½ÇÆĞ±â ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[6].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[6].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">[eBook] ¼ºÈñ·Õ °í¹ß Á÷ÀåÀÎÀÇ 5³â ½ÇÆĞ±â</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[6].summary}</h1> 
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">½Çºñ¾Æ</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[6].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[6].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">52</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[6].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">2,921,000¿ö</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">292%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[6].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[6].pop}%</span>
 											</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="Carousel__Column-sc-72guw4-5 fpWFDE">
-								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="/ebook_33?utm_source=tumblbug&amp;utm_medium=internal&amp;utm_campaign=ÅÒºí¹÷/¸ŞÀÎ/½Å±ÔÃßÃµ">
-									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="https://tumblbug-pci.imgix.net/3c197779bcc30fc6af04b68d94781af419fc097c/a47ab0e17f5d63b7172219d559a1c2e36c81f72b/220be8b2259c1de1ac748bcaceec3066f0548199/e9463980-4b3f-44da-a925-4e4cbf975375.jpg?ixlib=rb-1.1.0&amp;w=620&amp;h=465&amp;auto=format%2Ccompress&amp;lossless=true&amp;fit=crop&amp;s=e130f45ea67952dd5911dc7b4f968991" alt="³»°¡ ²Ş²Ù´ø 'ÀüÀÚÃ¥' ¸¸µé±â ÀÌ¹ÌÁö">
+								<a class="ProjectItem__ProjectItemCard-j9emyg-0 ihivvr" href="../page/info.do?num=${newprojectlist[7].project_num}">
+									<img class="ProjectItem__ProjectCoverimage-j9emyg-6 eaBarM" src="file/${newprojectlist[7].main_imageurl}">
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">³»°¡ ²Ş²Ù´ø 'ÀüÀÚÃ¥' ¸¸µé±â</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[7].summary}</h1> 
 											</div>
-											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">À¯Áø</p>
+											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[7].id}</p>
 										</div>
 										<svg class="ProjectItem__PercentageLine-j9emyg-5 uGYjB" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0" y="0" fill="#efefef" height="2" width="100%"></rect>
-											<rect x="0" y="0" height="2" width="100%" fill="#fa6462"></rect>
+											<rect x="0" y="0" height="2" width="${newprojectlist[7].pop}%" fill="#fa6462"></rect>
 										</svg>
 										<div class="ProjectItem__FundingInfo-j9emyg-7 eGfkCC">
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">25</span>ÀÏ&nbsp;³²À½
+													<span style="font-weight: 700;">${newprojectlist[7].deadline}</span>ì¼&nbsp;ë‚¨ìŒ
 												</span>
 											</span>
 											<div>
-												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">1,061,000¿ø</span>
-												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">321%</span>
+												<span class="ProjectItem__FundingMoney-j9emyg-8 eFNjaj">${newprojectlist[7].support_money}ì›</span>
+												<span class="ProjectItem__FundingRate-j9emyg-4 ldNMzx">${newprojectlist[7].pop}%</span>
 											</div>
 										</div>
 									</div>
@@ -829,7 +858,7 @@
 		</div>
 	</div>
 	<script>
-		//ÀÎ±â ÃßÃµ ÇÁ·ÎÁ§Æ®
+		//ì¸ê¸° ì¶”ì²œ í”„ë¡œì íŠ¸
 		function bestproject_right(){
 			document.getElementById("bestproject").style.transform = 'translate(0px, 0px) translateZ(0px)';
 			document.getElementById("bestproject2").style.transform = 'translate(1080px, 0px) translateZ(0px)';
@@ -843,7 +872,7 @@
 			document.getElementById("bestleftBtn").style.opacity = '0.2';
 		}
 		
-		//¸¶°¨ ÀÓ¹Ú ÇÁ·ÎÁ§Æ®	
+		//ë§ˆê° ì„ë°• í”„ë¡œì íŠ¸	
 		function endproject_right(){
 			document.getElementById("endingproject").style.transform = 'translate(0px, 0px) translateZ(0px)';
 			document.getElementById("endingproject2").style.transform = 'translate(1080px, 0px) translateZ(0px)';
@@ -858,7 +887,7 @@
 			document.getElementById("endingleftBtn").style.opacity = '0.2';
 		}
 		
-		//½Å±Ô ÃßÃµ ÇÁ·ÎÁ§Æ®	
+		//ì‹ ê·œ ì¶”ì²œ í”„ë¡œì íŠ¸	
 		function newproject_right(){
 			document.getElementById("newproject").style.transform = 'translate(0px, 0px) translateZ(0px)';
 			document.getElementById("newproject2").style.transform = 'translate(1080px, 0px) translateZ(0px)';

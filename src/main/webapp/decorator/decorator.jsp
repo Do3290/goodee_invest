@@ -169,8 +169,8 @@
 									<div class="Discover__Search-nj6hnw-1 iRqcUq">
 										<div class="Discover__DiscoverMenuTitle-nj6hnw-0 cXVSSP">검색</div>
 										<div class="SearchWidget__SerchInputWidget-sc-1quikp3-0 cOihOp">
-											<form action="">
-												<input type="search" class="SearchWidget__Input-sc-1quikp3-1 fpAvJE" placeholder="프로젝트를 검색해주세요" value="">
+											<form action="search.do" method="post">
+												<input type="search" class="SearchWidget__Input-sc-1quikp3-1 fpAvJE" placeholder="프로젝트를 검색해주세요" name="search">
 												<input type="submit" style="display: none;"><button class="Button-sc-1x93b2b-0 laSBHo">검색하기</button>
 											</form>
 										</div>
@@ -180,22 +180,22 @@
 								<div class="Container-gci8y7-0 GPraD">
 									<div class="Divider-sc-17hnup0-0 hiPjSF"></div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="search.do">
+										<a href="search.do?project=all">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">모든 프로젝트</span>
 										</a>
 									</div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="/discover?sort=popular&amp;editorPick=1&amp;ongoing=onGoing">
+										<a href="search.do?project=pop">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">인기 추천 프로젝트</span>
 										</a>
 									</div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="/discover?maxAchieveRate=99&amp;minAchieveRate=75&amp;editorPick=1&amp;sort=endedAt&amp;ongoing=onGoing">
+										<a href="search.do?project=end">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">마감 임박 프로젝트</span>
 										</a>
 									</div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="/discover?sort=publishedAt&amp;editorPick=1&amp;ongoing=onGoing">
+										<a href="search.do?project=new">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">신규 추천 프로젝트</span>
 										</a>
 									</div>
@@ -204,56 +204,56 @@
 										<div class="Discover__DiscoverMenuTitle-nj6hnw-0 cXVSSP">카테고리</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/creatorstoolbox">
+												<a href="search.do?category=게임">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs fqUNKa">게임</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/foodie">
+												<a href="search.do?category=공예">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs gJlLvU">공예</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/stranger">
+												<a href="search.do?category=영화·비디오">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs jHNvwL">영화·비디오</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/kitty">
+												<a href="search.do?category=패션">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs hpAJSZ">패션</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/wearekorean">
+												<a href="search.do?category=만화">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs ZHivy">만화</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/goodvibe">
+												<a href="search.do?category=디자인">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs glgpYK">디자인</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/creatorstoolbox">
+												<a href="search.do?category=음악">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs fqUNKa">음악</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="/collections/foodie">
+												<a href="search.do?category=테크놀로지">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs gJlLvU">테크놀로지</span>
 												</a>
 											</div>

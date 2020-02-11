@@ -1,5 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,46 +13,46 @@
 <body>
 	<div class="ProjectStartAgreements__AgreementsWrapper-sc-1vrd6a2-0 dtlkxL" data-reactid="40">
 		<div class="ProjectStartAgreements__ContentsBody-sc-1vrd6a2-1 hMCHfF" data-reactid="41">
-			<h2 class="ProjectStartAgreements__Header-sc-1vrd6a2-2 gAoVXO" data-reactid="42">ÇÁ·ÎÁ§Æ®¸¦ ¿Ã¸®±â Àü¿¡ È®ÀÎÇØ ÁÖ¼¼¿ä.</h2>
-			<div class="ProjectStartAgreements__Guidance-sc-1vrd6a2-3 ipkmcm" data-reactid="43">ÀÎº£½ºÆ®Àº °ø°³ °ËÅä ÀýÂ÷¸¦ ÅëÇØ Ã¢ÀÛÀÚ´ÔÀÌ ÀÛ¼ºÇÑ ÇÁ·ÎÁ§Æ®°¡ ÀÎº£½ºÆ®ÀÇ Á¤Ã¥À» ÁØ¼öÇÏ´ÂÁö È®ÀÎÇÏ°í ÀÖ½À´Ï´Ù.
-				<br data-reactid="45">¾Æ·¡ »çÇ×µéÀ» È®ÀÎÇÑ ÈÄ ÇÁ·ÎÁ§Æ®¸¦ ¿Ã·Á ÁÖ¼¼¿ä.
+			<h2 class="ProjectStartAgreements__Header-sc-1vrd6a2-2 gAoVXO" data-reactid="42">í”„ë¡œì íŠ¸ë¥¼ ì˜¬ë¦¬ê¸° ì „ì— í™•ì¸í•´ ì£¼ì„¸ìš”.</h2>
+			<div class="ProjectStartAgreements__Guidance-sc-1vrd6a2-3 ipkmcm" data-reactid="43">ì¸ë² ìŠ¤íŠ¸ì€ ê³µê°œ ê²€í†  ì ˆì°¨ë¥¼ í†µí•´ ì°½ìž‘ìžë‹˜ì´ ìž‘ì„±í•œ í”„ë¡œì íŠ¸ê°€ ì¸ë² ìŠ¤íŠ¸ì˜ ì •ì±…ì„ ì¤€ìˆ˜í•˜ëŠ”ì§€ í™•ì¸í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
+				<br data-reactid="45">ì•„ëž˜ ì‚¬í•­ë“¤ì„ í™•ì¸í•œ í›„ í”„ë¡œì íŠ¸ë¥¼ ì˜¬ë ¤ ì£¼ì„¸ìš”.
 				<ul data-reactid="47">
 					<li data-reactid="48">
-						<a href="${path}/invest_teamproject/help/cr3.do" target="_blank" rel="noopener noreferrer" data-reactid="49">ÀÎº£½ºÆ® ÇÁ·ÎÁ§Æ® ±ÔÄ¢</a>
+						<a href="${path}/invest_teamproject/help/cr3.do" target="_blank" rel="noopener noreferrer" data-reactid="49">ì¸ë² ìŠ¤íŠ¸ í”„ë¡œì íŠ¸ ê·œì¹™</a>
 					</li>
 					<li data-reactid="50">
-						<a href="${path}/invest_teamproject/help/cr4.do" target="_blank" rel="noopener noreferrer" data-reactid="51">Ã¢ÀÛÀÚ ÀÚ°Ý ¿ä°Ç</a>
+						<a href="${path}/invest_teamproject/help/cr4.do" target="_blank" rel="noopener noreferrer" data-reactid="51">ì°½ìž‘ìž ìžê²© ìš”ê±´</a>
 					</li>
 				</ul>
 			</div>
-			<form autocomplete="on" data-reactid="52" action="write2.do" method="post">
+			<form autocomplete="on" data-reactid="52" action="write.do">
 				<ul data-reactid="53">
 					<li data-reactid="54">
 						<div class="_13KHfN73YmQgsYHxXvuh_J _3bQlo02zZkYjUBehiAWUDX ProjectStartAgreements__ServiceAgreementCheckbox-sc-1vrd6a2-4 iQcbCy" data-reactid="55">
 							<input type="checkbox" id="98f0c" required="" data-reactid="56" value="on">
-							<label for="98f0c" style="cursor:pointer;" data-reactid="57">»õ·Î¿î ¾ÆÀÌµð¾î¸¦ ½ÇÇöÇÏ±â À§ÇÑ ÇÁ·ÎÁ§Æ®ÀÔ´Ï´Ù.</label>
+							<label for="98f0c" style="cursor:pointer;" data-reactid="57">ìƒˆë¡œìš´ ì•„ì´ë””ì–´ë¥¼ ì‹¤í˜„í•˜ê¸° ìœ„í•œ í”„ë¡œì íŠ¸ìž…ë‹ˆë‹¤.</label>
 						</div>
 					</li>
 					<li data-reactid="58">
 						<div class="_13KHfN73YmQgsYHxXvuh_J _3bQlo02zZkYjUBehiAWUDX ProjectStartAgreements__ServiceAgreementCheckbox-sc-1vrd6a2-4 iQcbCy" data-reactid="59">
 							<input type="checkbox" id="eec72" required="" data-reactid="60" value="on">
-							<label for="eec72" style="cursor:pointer;" data-reactid="61">ÀÌ¹Ì ½ÃÆÇµÈ Á¦Ç°, Çö±ÝÀÌ³ª ÁöºÐ µî ¼öÀÍ Á¦°ø, ¼±¹° ¾ø´Â ´Ü¼ø ±âºÎ, ¼ºÀÎ ÀÎÁõÀÌ ÇÊ¿äÇÑ ÄÜÅÙÃ÷ µî ±âÁØ¿¡ ¸ÂÁö ¾Ê´Â ¼±¹°À» Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.</label>
+							<label for="eec72" style="cursor:pointer;" data-reactid="61">ì´ë¯¸ ì‹œíŒëœ ì œí’ˆ, í˜„ê¸ˆì´ë‚˜ ì§€ë¶„ ë“± ìˆ˜ìµ ì œê³µ, ì„ ë¬¼ ì—†ëŠ” ë‹¨ìˆœ ê¸°ë¶€, ì„±ì¸ ì¸ì¦ì´ í•„ìš”í•œ ì½˜í…ì¸  ë“± ê¸°ì¤€ì— ë§žì§€ ì•ŠëŠ” ì„ ë¬¼ì„ ì œê³µí•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</label>
 						</div>
 					</li>
 					<li data-reactid="62">
 						<div class="_13KHfN73YmQgsYHxXvuh_J _3bQlo02zZkYjUBehiAWUDX ProjectStartAgreements__ServiceAgreementCheckbox-sc-1vrd6a2-4 iQcbCy" data-reactid="63">
 							<input type="checkbox" id="89e65" required="" data-reactid="64" value="on">
-							<label for="89e65" style="cursor:pointer;" data-reactid="65">Ã¢ÀÛÀÚÀÇ ½ÅºÐÁõ È¤Àº »ç¾÷ÀÚµî·ÏÁõ, ±¹³» ÀºÇà °èÁÂ, ¿¬¶ô °¡´ÉÇÑ º»ÀÎ ÈÞ´ëÆù ¹øÈ£°¡ ÀÖ½À´Ï´Ù.</label>
+							<label for="89e65" style="cursor:pointer;" data-reactid="65">ì°½ìž‘ìžì˜ ì‹ ë¶„ì¦ í˜¹ì€ ì‚¬ì—…ìžë“±ë¡ì¦, êµ­ë‚´ ì€í–‰ ê³„ì¢Œ, ì—°ë½ ê°€ëŠ¥í•œ ë³¸ì¸ íœ´ëŒ€í° ë²ˆí˜¸ê°€ ìžˆìŠµë‹ˆë‹¤.</label>
 						</div>
 					</li>
 					<li data-reactid="66">
 						<div class="_13KHfN73YmQgsYHxXvuh_J _3bQlo02zZkYjUBehiAWUDX ProjectStartAgreements__ServiceAgreementCheckbox-sc-1vrd6a2-4 iQcbCy" data-reactid="67">
 							<input type="checkbox" id="bad7f" required="" data-reactid="68" value="on">
-							<label for="bad7f" style="cursor:pointer;" data-reactid="69">Ã¢ÀÛÀÚ ´ëÇ¥ÀÚ´Â 19¼¼ ÀÌ»ó ¼ºÀÎÀÔ´Ï´Ù.</label>
+							<label for="bad7f" style="cursor:pointer;" data-reactid="69">ì°½ìž‘ìž ëŒ€í‘œìžëŠ” 19ì„¸ ì´ìƒ ì„±ì¸ìž…ë‹ˆë‹¤.</label>
 						</div>
 					</li>
 				</ul>
-				<button class="sc-1x93b2b-0-Button-kDSBcD eBHMAv" type="submit" data-reactid="70">°è¼ÓÇÏ±â</button>
+				<button class="sc-1x93b2b-0-Button-kDSBcD eBHMAv" type="submit" data-reactid="70">ê³„ì†í•˜ê¸°</button>
 			</form>
 		</div>
 	</div>

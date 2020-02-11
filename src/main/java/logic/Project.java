@@ -20,8 +20,8 @@ public class Project {
    private String state;
    private int goal;
    
+   
    private String deadline;
-   private int datediff;
    private String project_account;
    private String subject;
    private int reward_num;
@@ -31,16 +31,39 @@ public class Project {
    private int reward_goal;
    private String reward_date;
    
+   //박민진작업따로
+   private int pop;
+   private String date;
+   private int supportcnt;
    
-   //���� �߰�
+ //김경훈작업따로
    private int reward_state;
    private int support_money;
    private int support_num;
    private String support_address;
    private String tel;
    private String name;
-
+   private int datediff;
    
+   
+public int getPop() {
+	return pop;
+}
+public void setPop(int pop) {
+	this.pop = pop;
+}
+public String getDate() {
+	return date;
+}
+public void setDate(String date) {
+	this.date = date;
+}
+public int getSupportcnt() {
+	return supportcnt;
+}
+public void setSupportcnt(int supportcnt) {
+	this.supportcnt = supportcnt;
+}  
    
 public String getName() {
 	return name;
@@ -209,15 +232,11 @@ public String toString() {
 	return "Project [project_num=" + project_num + ", id=" + id + ", category=" + category + ", summary=" + summary
 			+ ", story=" + story + ", main_image=" + main_image + ", main_imageurl=" + main_imageurl + ", banner_image="
 			+ banner_image + ", banner_imageurl=" + banner_imageurl + ", state=" + state + ", goal=" + goal
-			+ ", deadline=" + deadline + ", datediff=" + datediff + ", project_account=" + project_account
-			+ ", subject=" + subject + ", reward_num=" + reward_num + ", item_order=" + item_order + ", item=" + item
-			+ ", itemcnt=" + itemcnt + ", reward_goal=" + reward_goal + ", reward_date=" + reward_date
-			+ ", reward_state=" + reward_state + ", support_money=" + support_money + ", support_num=" + support_num
-			+ ", support_address=" + support_address + ", tel=" + tel + ", name=" + name + "]";
-}
-
-
-
-   
-      
+			+ ", deadline=" + deadline + ", project_account=" + project_account + ", subject=" + subject
+			+ ", reward_num=" + reward_num + ", item_order=" + item_order + ", item=" + item + ", itemcnt=" + itemcnt
+			+ ", reward_goal=" + reward_goal + ", reward_date=" + reward_date + ", pop=" + pop + ", date=" + date
+			+ ", supportcnt=" + supportcnt + ", reward_state=" + reward_state + ", support_money=" + support_money
+			+ ", support_num=" + support_num + ", support_address=" + support_address + ", tel=" + tel + ", name="
+			+ name + ", datediff=" + datediff + "]";
+}    
 }
