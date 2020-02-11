@@ -139,6 +139,15 @@ Map<String,Object> param = new HashMap<String,Object>();
 		param.put("id",id);
 		return sqlSession.getMapper(UserMapper.class).supportDetail(param);
 	}
+	public void updateReward(int support_num) {
+		param.put("support_num",support_num);
+		sqlSession.getMapper(UserMapper.class).updateReward(param);
+	}
+	public Support getSupportOne(Support support_num, String id) {
+		param.put("support_num", support_num);
+		
+		return sqlSession.getMapper(UserMapper.class).getSupportOne(param);
+	}
 
 	
 }

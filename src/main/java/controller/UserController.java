@@ -187,15 +187,23 @@ public class UserController {
 		User loginuser = (User) session.getAttribute("loginUser");
 		String id = loginuser.getId();
 		int support_num = support.getSupport_num();
-		
+		System.out.println(support_num);
 		Project supportDetail = service.supportDetail(support_num, id);
-		
-		
+		session.setAttribute("support_num", support_num);
 		mav.addObject("supportDetail",supportDetail);
 		return mav;
 	}
+	@PostMapping("getReward")
+	public ModelAndView getReward(int support_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		service.updateReward(support_num);
+		
+		mav.setViewName("redirect:../user/supportdetail.do?support_num="+support_num);
+		
+		return mav;
 	
-	
+	}
 	@RequestMapping("support")
 	public ModelAndView support(HttpSession session, Support support,
 			String project_num, User user, Project project, String searchtype, String searchcontent) {
@@ -232,7 +240,7 @@ public class UserController {
 	public ModelAndView project(String id, String project_num)  {
 		ModelAndView mav = new ModelAndView();
 		List<Project> userproject = service.getProject(id,project_num);
-		
+		System.out.println(userproject);
 		int listcount = service.projectcount(id);
 		mav.addObject("userproject",userproject);
 		mav.addObject("listcount", listcount);
