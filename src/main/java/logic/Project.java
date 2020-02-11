@@ -1,6 +1,8 @@
 package logic;
 
 
+import java.util.List;
+
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -45,8 +47,61 @@ public class Project {
    private String name;
    private int datediff;
    private String nic;
+   //도도리표
+   private List<Support> splist;
+	private String sp_avg_sex;
+	private String sp_avg_age;
+	private int spcnt;
+	private int spsum;
+	private String p_nic;
+	
+	
+	public String getP_nic() {
+		return p_nic;
+	}
+	public void setP_nic(String p_nic) {
+		this.p_nic = p_nic;
+	}
+	public String getSp_avg_sex() {
+		return sp_avg_sex;
+	}
+	public void setSp_avg_sex(String sp_avg_sex) {
+		this.sp_avg_sex = sp_avg_sex;
+	}
+	public String getSp_avg_age() {
+		return sp_avg_age;
+	}
+	public void setSp_avg_age(String sp_avg_age) {
+		this.sp_avg_age = sp_avg_age;
+	}
+	public int getSpcnt() {
+		return spcnt;
+	}
+	public void setSpcnt() {
+		this.spcnt = splist.size();
+	}
+	public int getSpsum() {
+		return spsum;
+	}
+
+	public void setSpsum() {
+   		for(int i=0;i<splist.size();i++) {
+   			this.spsum += splist.get(i).getSupport_money();
+		}
+	}
+	public List<Support> getSplist() {
+		return splist;
+	}
+	public void setSplist(List<Support> splist) {
+		this.splist = splist;
+	}
+	
    
-   
+	
+	
+	
+	
+	
 public String getNic() {
 	return nic;
 }

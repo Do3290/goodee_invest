@@ -1,12 +1,11 @@
 package logic;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.format.annotation.DateTimeFormat;
 
 public class User {
 	private String id;
@@ -21,6 +20,57 @@ public class User {
 	private Date signdate;
 	private int usertag;
 	private String story;
+	
+	private List<Support> splist;
+	private int spcnt;
+	private int spsum;
+	private String category;
+	private List<Project> mypjlist;
+	private int mypjcnt;
+	
+	public List<Project> getMypjlist() {
+		return mypjlist;
+	}
+	public void setMypjlist(List<Project> mypjlist) {
+		this.mypjlist = mypjlist;
+	}
+	
+	public int getMypjcnt() {
+		return mypjcnt;
+	}
+	public void setMypjcnt() {
+		this.mypjcnt = mypjlist.size();
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String string) {
+			this.category = string;
+	}
+	public int getSpsum() {
+		return spsum;
+	}
+	public void setSpsum() {
+		for(int i=0;i<splist.size();i++) {
+			this.spsum += splist.get(i).getSupport_money();
+		}
+	}
+	public int getSpcnt() {
+		return spcnt;
+	}
+	public void setSpcnt() {
+		this.spcnt = splist.size();
+	}
+	public List<Support> getSplist() {
+		return splist;
+	}
+	public void setSplist(List<Support> splist) {
+		this.splist = splist;
+	}
+	
+	
+	
+	
 	public String getStory() {
 		return story;
 	}

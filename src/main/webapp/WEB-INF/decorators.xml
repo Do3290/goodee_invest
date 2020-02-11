@@ -6,11 +6,17 @@
 	</decorator>
 	<excludes>
 		<pattern>/page/banner*</pattern>
+		<pattern>/admin/spview*</pattern>
+		<pattern>/admin/pjview*</pattern>
 	</excludes>
 	<decorator name="help" page="decorator1.jsp">
 		<pattern>/help/*</pattern>
 	</decorator>
-	<excludes>
-	</excludes>
+
+	<decorator name="admin" page="admindeco.jsp">
+		<pattern>/admin/*</pattern>
+	</decorator>
+	
+	
 	<!-- layout 제외 설정 -->
 </decorators>
