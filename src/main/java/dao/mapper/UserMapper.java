@@ -122,7 +122,7 @@ void moneyUpdate(Map<String, Object> param);
 
 
 
-@Select("SELECT * FROM support s JOIN userdb u ON s.id = u.id" 
+@Select("SELECT *, TIMESTAMPDIFF(DAY,NOW(),deadline) 'datediff' FROM support s JOIN userdb u ON s.id = u.id" 
 		+" AND s.id=#{id} join project p on p.project_num = s.project_num AND s.support_num=#{support_num}")
 
 Project supportDetail(Map<String, Object> param);

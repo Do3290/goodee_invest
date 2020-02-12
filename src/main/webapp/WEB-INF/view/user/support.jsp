@@ -188,8 +188,9 @@
 <div class="xKo-_9M8EJDLXjQD7P_uX"></div>
 <div class="_3ngyn_oTUFrIxTcOgGouoL">
 <div class="_3560uqFYsEspUH6-ImjYr2">
-<div class="_8j9TZHp6qi1mJbK4MQFDM">
-<img alt="보드게임 1945 : 반민족행위특별조사위원회" class="_13KHfN73YmQgsYHxXvuh_J _2H5AJMZT-xLtuIvR5jP8rd _2-N-uV2y5apkjtxqdVnsop _2aquK6B3D0GYX7zQT4_IR7" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/77600238658eba16e6a83ce15d079f85381bc4db/7ce5c85130037b1c9b4ee0a3528233d4925c3da4/5f3bbc3d-c103-4214-9f67-a09aefcb32a9.jpg?ixlib=rb-1.1.0&amp;h=240&amp;w=320&amp;fit=crop&amp;s=e02689106b612a5444ac87c7d3e8956b"></div>
+<div class="_8j9TZHp6qi1mJbK4MQFDM" style ="width: 250px;" >
+<img src="../page/file/${supportlist.main_imageurl }" class="_13KHfN73YmQgsYHxXvuh_J _2H5AJMZT-xLtuIvR5jP8rd _2-N-uV2y5apkjtxqdVnsop _2aquK6B3D0GYX7zQT4_IR7" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/77600238658eba16e6a83ce15d079f85381bc4db/7ce5c85130037b1c9b4ee0a3528233d4925c3da4/5f3bbc3d-c103-4214-9f67-a09aefcb32a9.jpg?ixlib=rb-1.1.0&amp;h=240&amp;w=320&amp;fit=crop&amp;s=e02689106b612a5444ac87c7d3e8956b"></div>
+
 <div class="_2rdXpEjSOLwDFilZKJUHe5"><div>
 <label class="_13KHfN73YmQgsYHxXvuh_J _1DLNFgQRrQNEosKFB0zOK5 _3sFSjAZS4gQdCAyN3OfyFG _1Qdv504-1XMeYXZyb0xQZT _3D9sfZXrWd8it3eUCuCTc8 _2BIT5x1MzYkxpZlDSFDBBf">펀딩 진행중</label></div>
 <div class="_3U9owGBULZAr0pvllg_6Ra">프로젝트 제목 : ${supportlist.subject }&nbsp;&nbsp;</div>
@@ -198,12 +199,13 @@
 <div>&nbsp;&nbsp;
 <br></div>
 </div><div class="_23t6XFLCZFLZIDAzBetmBO">
-<b>${supportlist.support_money }원을 후원하셨습니다</div></div>
+${supportlist.support_money }원을 후원하셨습니다</div></div>
 <div class="_2tH89n3Ch5n35AohOlcaaJ">
+<input type="hidden" value="${supportlist.support_num }">
+<i class="_3IZTJ_lSKq4pCcBiKlOj-W _2HoE4oZGsosJrP4t5ggo2j _3EDOT6mnWfo2CobuYD5UO7 WU1ox0-AeDX_zneKjnNMO _1QY7TzdLHKX3-BKPDNNYKF" onclick="location.href='supportdetail.do?support_num=${supportlist.support_num}'" >
 
-
-<i class="_3IZTJ_lSKq4pCcBiKlOj-W _2HoE4oZGsosJrP4t5ggo2j _3EDOT6mnWfo2CobuYD5UO7 WU1ox0-AeDX_zneKjnNMO _1QY7TzdLHKX3-BKPDNNYKF">
 </i>
+
 </div>
 
 
@@ -257,8 +259,9 @@
 <div class="xKo-_9M8EJDLXjQD7P_uX"></div>
 <div class="_3ngyn_oTUFrIxTcOgGouoL">
 <div class="_3560uqFYsEspUH6-ImjYr2">
-<div class="_8j9TZHp6qi1mJbK4MQFDM">
-<img alt="보드게임 1945 : 반민족행위특별조사위원회"style ="width: 250px;" class="_13KHfN73YmQgsYHxXvuh_J _2H5AJMZT-xLtuIvR5jP8rd _2-N-uV2y5apkjtxqdVnsop _2aquK6B3D0GYX7zQT4_IR7" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/77600238658eba16e6a83ce15d079f85381bc4db/7ce5c85130037b1c9b4ee0a3528233d4925c3da4/5f3bbc3d-c103-4214-9f67-a09aefcb32a9.jpg?ixlib=rb-1.1.0&amp;h=240&amp;w=320&amp;fit=crop&amp;s=e02689106b612a5444ac87c7d3e8956b"></div>
+<div class="_8j9TZHp6qi1mJbK4MQFDM" style ="width: 250px;" >
+<img src="../page/file/${supportlist.main_imageurl }" class="_13KHfN73YmQgsYHxXvuh_J _2H5AJMZT-xLtuIvR5jP8rd _2-N-uV2y5apkjtxqdVnsop _2aquK6B3D0GYX7zQT4_IR7" src="https://tumblbug-pci.imgix.net/dfd6741e6221c177ba50d064c6f64cbc6f8edc53/77600238658eba16e6a83ce15d079f85381bc4db/7ce5c85130037b1c9b4ee0a3528233d4925c3da4/5f3bbc3d-c103-4214-9f67-a09aefcb32a9.jpg?ixlib=rb-1.1.0&amp;h=240&amp;w=320&amp;fit=crop&amp;s=e02689106b612a5444ac87c7d3e8956b"></div>
+
 <div class="_2rdXpEjSOLwDFilZKJUHe5"><div>
 <label class="_13KHfN73YmQgsYHxXvuh_J _1DLNFgQRrQNEosKFB0zOK5 _3sFSjAZS4gQdCAyN3OfyFG _1Qdv504-1XMeYXZyb0xQZT _3D9sfZXrWd8it3eUCuCTc8 _2BIT5x1MzYkxpZlDSFDBBf">마감된 프로젝트</label></div>
 <div class="_3U9owGBULZAr0pvllg_6Ra">프로젝트 제목 : ${supportlist.subject }&nbsp;&nbsp;</div>
@@ -267,9 +270,14 @@
 <div>&nbsp;&nbsp;
 <br></div>
 </div><div class="_23t6XFLCZFLZIDAzBetmBO">
-<b>${supportlist.support_money }원을 후원하셨습니다</div></div>
-<div class="_2tH89n3Ch5n35AohOlcaaJ"><i class="_3IZTJ_lSKq4pCcBiKlOj-W _2HoE4oZGsosJrP4t5ggo2j _3EDOT6mnWfo2CobuYD5UO7 WU1ox0-AeDX_zneKjnNMO _1QY7TzdLHKX3-BKPDNNYKF">
-</i></div></div></div></div></a></div>
+${supportlist.support_money }원을 후원하셨습니다</div></div>
+<div class="_2tH89n3Ch5n35AohOlcaaJ">
+<input type="hidden" value="${supportlist.support_num }">
+<i class="_3IZTJ_lSKq4pCcBiKlOj-W _2HoE4oZGsosJrP4t5ggo2j _3EDOT6mnWfo2CobuYD5UO7 WU1ox0-AeDX_zneKjnNMO _1QY7TzdLHKX3-BKPDNNYKF" onclick="location.href='supportdetail.do?support_num=${supportlist.support_num}'" >
+
+</i>
+
+</div></div></div></div></div>
 </c:if></c:forEach>
 				</div>
 			</div>

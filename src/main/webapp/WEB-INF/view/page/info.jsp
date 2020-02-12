@@ -222,9 +222,16 @@
 								</div>
 								<div class="ProjectIntroduction__ProjectButtons-sc-1o2ojgb-19 fHOYOE" data-reactid="87">
 									<div class="ProjectIntroduction__ProjectButtonsInner-sc-1o2ojgb-20 frPGIq" data-reactid="88">
-										<div class="ProjectIntroduction__PrimaryButton-sc-1o2ojgb-21 lcgtza" data-reactid="89">
-											<button class="Button-sc-1x93b2b-0 KCBYB" data-reactid="90" onclick = "location.href='../user/supporting.do?num=${project.project_num}'">프로젝트 밀어주기</button>
-										</div>
+                                 <c:if test='${loginUser.id != null && loginUser.id != project.id}'>
+                              <div class="ProjectIntroduction__PrimaryButton-sc-1o2ojgb-21 lcgtza" data-reactid="89">
+                                 <button class="Button-sc-1x93b2b-0 KCBYB" data-reactid="90" onclick = "location.href='../user/supporting.do?num=${project.project_num}'">프로젝트 밀어주기</button>
+                              </div>
+                              </c:if>
+                                 <%-- <c:if test='${loginUser.id != null || loginUser.id != project.id}'>
+                              <div class="ProjectIntroduction__PrimaryButton-sc-1o2ojgb-21 lcgtza" data-reactid="89">
+                                 
+                              </div>
+                              </c:if> --%>
 									</div> 
 								</div>
 							</aside>

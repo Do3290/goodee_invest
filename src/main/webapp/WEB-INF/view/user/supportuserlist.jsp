@@ -25,6 +25,8 @@
 
 						<div style="width: 1000px; font-size: 25px;"
 							class="_3U9owGBULZAr0pvllg_6Ra">
+							
+							
 							<div class="_2rdXpEjSOLwDFilZKJUHe5">
 
 
@@ -33,13 +35,14 @@
 								${support.nic}님이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 총&nbsp;
 								${support.support_money } &nbsp;를 후원하셨습니다.
 							</div>
+							
 						</div>
-						
 						<div
 							class="_2dKJQZGqcB1T0xe0DzKY0H _152MAijd_UogerBKCVqZR_ _1lLHKI5v9AoCyeggtffvGZ">
 							<div style="width: 1300px;">
 							<input type="hidden" value="${support.id }" name="id">
 							<input type= "hidden" value="${support.project_num }"name = "project_num">
+							
 								<c:if test="${support.reward_state eq 0}">
 									<b>&nbsp;</b>
 									<form action = "givereward.do" method = "post">
@@ -60,6 +63,8 @@
 					</div>
 				</div>
 			</c:forEach>
+			
+			
 			<div class="_23t6XFLCZFLZIDAzBetmBO"></div>
 		</div>
 	</div>

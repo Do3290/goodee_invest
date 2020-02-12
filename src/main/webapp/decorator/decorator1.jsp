@@ -19,16 +19,20 @@
 		<script src="js/init.js"></script>
 		<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 			<link rel="stylesheet" href="${path}/css/skel.css"> 
-			<link rel="stylesheet" href="${path}/css/style.css">
-			<link rel="stylesheet" href="${path}/css/style-xlarge.css">
+			<link rel="stylesheet" href="${path}/css/style.css"><link rel="stylesheet" href="${path}/css/style-xlarge.css">
+			<link rel="stylesheet" href="${path}/css/help.css">
 	</head>
 <style>
-	body{
-	 background-color: #F7F7F7;
-	 }
+	.section-tree .section {
+    flex: 0 0 45%;
+    /* Two columns for tablet and desktop. Leaving 5% separation between columns */
+  }
+  a:link {
+  text-decoration: none !important;
+}
 	section.img {
-	background-image:url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&h=350")};
-	}
+	    background-image: url(https://theme.zdassets.com/theme_assets/730708/fa7f58bbfdf24bea535653143dddb8b31e156a21.jpg);
+	    }
 	div.block-title {
     	padding: 20px 20px;
     	position: absolute;
@@ -41,7 +45,6 @@
 	div.block{
 		padding: 20px 20px;
     	background-color: white;
-    	border: 1px solid #EFEDED;
     	margin-bottom: 10px;
     	position: relative;
 	}
@@ -53,20 +56,6 @@
 	a{
 	color: #191919;
 	text-decoration: none;
-	}
-
-	.block-articles-item
-	{
-	  	z-index: 5;
-   	 	text-decoration: none;
-    	color: #191919;
-    	width: 25%;
-    	border: 1px solid #EFEDED;
-    	background-color: #ffffff;
-    	display: block;
-    	padding: 12px 16px;
-    	height: 100%;
-    	font-size: 0.9rem;
 	}
 	.block-articles-items
 	{
@@ -171,6 +160,93 @@
     	padding: 10px;
     	min-height: 150px;
 	}
+	.block-articles-item {
+    z-index: 5;
+    text-decoration: none;
+    color: #191919;
+    border: 1px solid #EFEDED;
+    background-color: #ffffff;
+    display: block;
+    padding: 12px 16px;
+    height: 100%;
+    font-size: 0.9rem;
+    flex-basis: 50%;
+	}
+	
+	.block-content {
+ 	  padding-left: 33.33%;
+  	  min-height: 90px;
+	}
+	ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	}	
+	li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+	}
+		.gROBpc {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #d9dcdc;
+     width: 1080px;
+    margin: 0 auto;
+	}
+	.dVmjva {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -1px;
+	}
+	.jpLVMg {
+    padding: 13px;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    border-bottom: 1px solid transparent;
+    font-size: 0.9em;
+    color: #878787;
+    border-bottom-color: transparent;
+    -webkit-transition: all 0.18s ease-out;
+    transition: all 0.18s ease-out;
+	}
+.gFwOfK {
+    margin: 0;
+    padding-left: 13px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+		p{
+		font-size:14px;
+	}
+	div.4u{
+	flex: 1;
+    max-height: 45px;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+}
+	.wrapper style1{
+	max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 5%;
+    padding-top: 0px;
+    padding-right: 5%;
+    padding-bottom: 0px;
+    padding-left: 5%;
+}
 </style>
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">

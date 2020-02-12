@@ -201,7 +201,6 @@
 												<div style="width:40%;word-break:break-all;word-wrap:break-word;"><label>주소</label><input name="address1" id="address1" size="60"></div>
 												<div style="width:40%;word-break:break-all;word-wrap:break-word;"><label>상세주소</label><input name="address2" id="address2"></div>
 												
-												<%-- 	<form:hidden path="id" value="${loginUser.id}" /> --%>
 										</div>																		
 									</div>
 								</div>
@@ -232,6 +231,12 @@
 										</div>
 										</form:form>
 		<script>
+		
+		/* document.addEventListener('keydown', function(event) {
+			  if (event.keyCode === 13) {
+			    event.preventDefault();
+			  };
+			}, true); */
 	function daumZipCode() {
 		new daum.Postcode(
 				{

@@ -58,7 +58,7 @@ public class UserController {
 	System.out.println(" callback");
 	OAuth2AccessToken oauthToken;
 	oauthToken = naverLoginBO.getAccessToken(session, code, state);
-	apiResult = naverLoginBO.getUserProfile(oauthToken); //String������ json������
+	apiResult = naverLoginBO.getUserProfile(oauthToken);
 	JSONParser parser = new JSONParser();
 	Object obj = parser.parse(apiResult);
 	JSONObject jsonObj = (JSONObject) obj;
@@ -201,7 +201,7 @@ public class UserController {
 		System.out.println(request.getParameter("project_num"));
 	
 		ModelAndView mav = new ModelAndView();
-		service.giveReward(project_num,id);
+		service.giveReward(project_num,id);	
 		mav.setViewName("redirect:../user/supportuserlist.do?num="+project_num);
 		return mav;
 	}
@@ -214,6 +214,16 @@ public class UserController {
 		int support_num = support.getSupport_num();
 		System.out.println(support_num);
 		Project supportDetail = service.supportDetail(support_num, id);
+		
+		String address = supportDetail.getSupport_address();
+		String[] address1 = address.split("/");
+		String add1 = address1[0];
+		String add2 = address1[1];
+		String add3 = address1[2];
+		
+		mav.addObject("add1", add1);
+		mav.addObject("add2",add2);
+		mav.addObject("add3",add3);
 		mav.addObject("supportDetail",supportDetail);
 		System.out.println(supportDetail);
 		return mav;
@@ -296,7 +306,9 @@ public class UserController {
 	public ModelAndView supporting(HttpSession session, Support support, HttpServletRequest request, Integer project_num) {
 		ModelAndView mav = new ModelAndView();
 		User loginuser = (User) session.getAttribute("loginUser");
+		
 		System.out.println("번호는?"+project_num);
+		
 		String zipcode = request.getParameter("zipcode");
 		String address1 = request.getParameter("address1");
 		String address2 = request.getParameter("address2");
@@ -335,9 +347,11 @@ public class UserController {
 		session.setAttribute("a", a);
 		session.setAttribute("b", b);
 		session.setAttribute("c", c);
+		User user1 = (User)session.getAttribute("dbuser");
+		user1.setNic(user.getNic());
+		session.setAttribute("dbuser", user1);
 		
-		
-		return mav;
+		return mav;	
 	}
 	@GetMapping(value= {"updateview"})
 	public ModelAndView updateview(String id, HttpSession session) {
