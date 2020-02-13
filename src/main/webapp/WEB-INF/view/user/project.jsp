@@ -161,12 +161,9 @@
   <div class="b-project-card__figures">
 
     <div class="[ b-project-card__figure b-project-card__figure_for_amount ]">
-      <span class="b-project-card__figure-title">모인 금액</span>
+      <span class="b-project-card__figure-title">목표 금액</span>
       <span class="b-project-card__figure-item">
         ${project.goal}
-        <span class="b-project-card__percentage">
-          0 %
-        </span>
       </span>
     </div>
     <div class="[ b-project-card__figure b-project-card__figure_for_day ]">

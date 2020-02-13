@@ -23,7 +23,7 @@
 <br>
 
 <!-- kakao창으로 이동 -->
-<div style="text-align:center"><a href = "https://kauth.kakao.com/oauth/authorize?client_id=8d471762f594e00460f15f188ab7c6d2&redirect_uri=http://localhost:8080/invest_team/user/info2.do&response_type=code">
+<div style="text-align:center"><a href = "https://kauth.kakao.com/oauth/authorize?client_id=8d471762f594e00460f15f188ab7c6d2&redirect_uri=http://192.168.0.59:8080/invest_team/user/info2.do&response_type=code">
 <img src="../img/kakao_account_login_btn_medium_narrow.png"></a></div>
 <br>
  

@@ -110,7 +110,7 @@
 															<div class="_3ZgG-OSv0XE3y-h3oPaDsl" style="padding: 1rem; height: 86px;">
 																<div class="P8euTwfxXCnb1PWn02ypS">
 																	<div class="_3pHwEkSiYqWk69Gc95VG0O">
-																		<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">${project.summary}</div>
+																		<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">${project.subject}</div>
 																	</div>
 																	<div class="_30kvww8__aiRweo3To4YZ4">${project.id}</div>
 																</div>

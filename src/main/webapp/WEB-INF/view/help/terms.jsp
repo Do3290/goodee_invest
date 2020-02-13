@@ -5,9 +5,28 @@
 <head>
 <meta charset="UTF-8">
 <title>정책 및 약관</title>
+<style>
+	.dVmjva {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -1px;
+	}
+	
+</style>
 </head>
 <body>
 	<!-- One -->
+			<nav class="Policies__PoliciesNav-sc-1j0dfnl-0 gROBpc" style="padding-top:50px; width:80%">
+				<h2 class="Policies__PolicyHeader-sc-1j0dfnl-1 gFwOfK">약관 및 정책</h2>
+			<ul class="Policies__PolicyMenu-sc-1j0dfnl-2 dVmjva" style="display:contents">
+			<li class="Policies__PolicyItem-sc-1j0dfnl-3 ffOdoJ">
+			<a class="Policies__PolicyLink-sc-1j0dfnl-4 jpLVMg" href="${path}/invest_team/help/terms.do" style="color: rgb(250, 100, 98); border-color: rgb(250, 100, 98);">사용자 이용약관</a></li><li class="Policies__PolicyItem-sc-1j0dfnl-3 ffOdoJ">
+			<a class="Policies__PolicyLink-sc-1j0dfnl-4 jpLVMg" href="${path}/invest_team/help/commu.do">커뮤니티 운영원칙</a>
+			</li>
+			<li class="Policies__PolicyItem-sc-1j0dfnl-3 ffOdoJ">
+			<a class="Policies__PolicyLink-sc-1j0dfnl-4 jpLVMg" href="${path}/invest_team/help/privacy.do">개인정보 취급방침</a>
+			</li></ul></nav>
 			<section id="one" class="wrapper style1" style="width:80%;margin-right:auto; margin-left:auto; padding:auto;">
 <!-- 				<div style="float:right"> -->
 <%-- 					<a href="${path}/shop5/board/terms.shop">사용자 이용약관</a>  --%>

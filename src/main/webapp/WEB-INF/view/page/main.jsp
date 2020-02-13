@@ -43,29 +43,29 @@
 			<li>
 				<a href="info.do?num=${bestprojectlist[0].project_num}"><img src="file/${bestprojectlist[0].banner_imageurl}" style="width: 100%; height: 100%;"></a>
 				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;" >
-					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[0].subject}<br></h1>
-					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[0].summary}</div>
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70"><br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[0].subject}</div>
 				</div>
 			</li>
 			<li>
 				<a href="info.do?num=${bestprojectlist[1].project_num}"><img src="file/${bestprojectlist[1].banner_imageurl}" style="width: 100%; height: 100%;"></a>
 				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;">
-					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[1].subject}<br></h1>
-					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[1].summary}</div>
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70"><br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[1].subject}</div>
 				</div>
 			</li>
 			<li>
-				<img src="file/${bestprojectlist[2].banner_imageurl}" style="width: 100%; height: 100%;">
+				<a href="info.do?num=${bestprojectlist[2].project_num}"><img src="file/${bestprojectlist[2].banner_imageurl}" style="width: 100%; height: 100%;"></a>
 				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;">
-					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[2].subject}<br></h1>
-					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[2].summary}</div>
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70"><br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[2].subject}</div>
 				</div>	
 			</li>
 			<li>
-				<img src="file/${bestprojectlist[3].banner_imageurl}" style="width: 100%; height: 100%;">
+				<a href="info.do?num=${bestprojectlist[3].project_num}"><img src="file/${bestprojectlist[3].banner_imageurl}" style="width: 100%; height: 100%;"></a>
 				<div class="HeroWidget__HeroTextWrapper-xxrhv3-5 ejvDHe" data-reactid="69" style="max-width: 1080px; margin: 0 auto; position: sticky; color:white;">
-					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70">${bestprojectlist[3].subject}<br></h1>
-					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[3].summary}</div>
+					<h1 class="HeroWidget__HeroTitle-xxrhv3-6 fmKiut" data-reactid="70"><br></h1>
+					<div class="HeroWidget__HeroDescription-xxrhv3-7 armmr" data-reactid="71">${bestprojectlist[3].subject}</div>
 				</div>
 			</li>
 		</ul>
@@ -105,7 +105,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[0].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[0].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[0].id}</p>
 										</div>
@@ -134,7 +134,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[1].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[1].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[1].id}</p>
 										</div>
@@ -146,7 +146,7 @@
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">25</span>일&nbsp;남음
+													<span style="font-weight: 700;">${bestprojectlist[1].deadline}</span>일&nbsp;남음
 												</span>
 											</span>
 											<div>
@@ -163,7 +163,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[2].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[2].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[2].id}</p>
 										</div>
@@ -175,7 +175,7 @@
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">52</span>일&nbsp;남음
+													<span style="font-weight: 700;">${bestprojectlist[2].deadline}</span>일&nbsp;남음
 												</span>
 											</span>
 											<div>
@@ -192,7 +192,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[3].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[3].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[3].id}</p>
 										</div>
@@ -204,7 +204,7 @@
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">31</span>일&nbsp;남음
+													<span style="font-weight: 700;">${bestprojectlist[3].deadline}</span>일&nbsp;남음
 												</span>
 											</span>
 											<div>
@@ -223,7 +223,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[4].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[4].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[4].id}</p>
 										</div>
@@ -235,7 +235,7 @@
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">22</span>일&nbsp;남음
+													<span style="font-weight: 700;">${bestprojectlist[4].deadline}</span>일&nbsp;남음
 												</span>
 											</span>
 											<div>
@@ -252,7 +252,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[5].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[5].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[5].id}</p>
 										</div>
@@ -264,7 +264,7 @@
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">48</span>일&nbsp;남음
+													<span style="font-weight: 700;">${bestprojectlist[5].deadline}</span>일&nbsp;남음
 												</span>
 											</span>
 											<div>
@@ -281,7 +281,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[6].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[6].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[6].id}</p>
 										</div>
@@ -293,7 +293,7 @@
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">9</span>일&nbsp;남음
+													<span style="font-weight: 700;">${bestprojectlist[6].deadline}</span>일&nbsp;남음
 												</span>
 											</span>
 											<div>
@@ -310,7 +310,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[7].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${bestprojectlist[7].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${bestprojectlist[7].id}</p>
 										</div>
@@ -322,7 +322,7 @@
 											<span style="font-size: 0.8rem;">
 												<span>
 													<i class="_2CeNIUhLMEIh6Reaatfs8t _1DLNFgQRrQNEosKFB0zOK5 _3fJsfvAPykJzj2xoMnxzWW _1QY7TzdLHKX3-BKPDNNYKF"></i>
-													<span style="font-weight: 700;">32</span>일&nbsp;남음
+													<span style="font-weight: 700;">${bestprojectlist[7].deadline}</span>일&nbsp;남음
 												</span>
 											</span>
 											<div>
@@ -364,7 +364,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[0].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[0].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[0].id}</p>
 										</div>
@@ -393,7 +393,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[1].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[1].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[1].id}</p>
 										</div>
@@ -422,7 +422,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[2].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[2].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[2].id}</p>
 										</div>
@@ -451,7 +451,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[3].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[3].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[3].id}</p>
 										</div>
@@ -482,7 +482,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[4].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[4].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[4].id}</p>
 										</div>
@@ -511,7 +511,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[5].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[5].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[5].id}</p>
 										</div>
@@ -540,7 +540,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[6].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[6].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[6].id}</p>
 										</div>
@@ -569,7 +569,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[7].summary}</h1>
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${endprojectlist[7].subject}</h1>
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${endprojectlist[7].id}</p>
 										</div>
@@ -623,7 +623,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[0].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[0].subject}</h1> 
 											</div> 
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[0].id}</p>
 										</div>
@@ -652,7 +652,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[1].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[1].subject}</h1> 
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[1].id}</p>
 										</div>
@@ -681,7 +681,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[2].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[2].subject}</h1> 
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[2].id}</p>
 										</div>
@@ -710,7 +710,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[3].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[3].subject}</h1> 
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[3].id}</p>
 										</div>
@@ -741,7 +741,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[4].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[4].subject}</h1> 
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[4].id}</p>
 										</div>
@@ -770,7 +770,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[5].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[5].subject}</h1> 
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[5].id}</p>
 										</div>
@@ -799,7 +799,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[6].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[6].subject}</h1> 
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[6].id}</p>
 										</div>
@@ -828,7 +828,7 @@
 									<div class="ProjectItem__ProjectTextWrapper-j9emyg-1 idMFxu">
 										<div class="ProjectItem__FundingTitle-j9emyg-9 bPQPya">
 											<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">
-												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[7].summary}</h1> 
+												<h1 class="ProjectItem__ProjectTitle-j9emyg-2 fYikfb">${newprojectlist[7].subject}</h1> 
 											</div>
 											<p class="ProjectItem__CreatorName-j9emyg-3 kwVXIK">${newprojectlist[7].id}</p>
 										</div>

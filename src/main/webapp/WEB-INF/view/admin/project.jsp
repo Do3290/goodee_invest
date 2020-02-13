@@ -40,8 +40,8 @@ $(function() {
 
 });
 function listdo(page){
-	document.searchform.pageNum.value=page;
-	document.searchform.submit();
+	document.sf.pageNum.value=page;
+	document.sf.submit();
 }
 function mySubmit(index) {
     if (index == 1) {
@@ -59,7 +59,7 @@ function mySubmit(index) {
 <body>
 	<div class="card mb-3">
 		<div class="card-body">
-			<form action="	" method="post" name="sf">
+			<form action="project.do" method="post" name="sf">
 				<input type="hidden" name="pageNum" value="1">
 				<table class="table" width="100%" cellspacing="0" style="text-align: center">
 					<tr>

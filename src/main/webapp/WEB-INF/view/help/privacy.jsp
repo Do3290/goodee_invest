@@ -5,19 +5,33 @@
 <head>
 <meta charset="UTF-8">
 <title>정책 및 약관</title>
+<style>
+	.dVmjva {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -1px;
+	}
+	
+</style>
 </head>
 <body>
 	<!-- One -->
+			<nav class="Policies__PoliciesNav-sc-1j0dfnl-0 gROBpc" style="padding-top:50px; width:80%">
+				<h2 class="Policies__PolicyHeader-sc-1j0dfnl-1 gFwOfK">약관 및 정책</h2>
+			<ul class="Policies__PolicyMenu-sc-1j0dfnl-2 dVmjva" style="display:contents">
+			<li class="Policies__PolicyItem-sc-1j0dfnl-3 ffOdoJ">
+			<a class="Policies__PolicyLink-sc-1j0dfnl-4 jpLVMg" href="${path}/invest_team/help/terms.do" style="color: rgb(250, 100, 98); border-color: rgb(250, 100, 98);">사용자 이용약관</a></li><li class="Policies__PolicyItem-sc-1j0dfnl-3 ffOdoJ">
+			<a class="Policies__PolicyLink-sc-1j0dfnl-4 jpLVMg" href="${path}/invest_team/help/commu.do">커뮤니티 운영원칙</a>
+			</li>
+			<li class="Policies__PolicyItem-sc-1j0dfnl-3 ffOdoJ">
+			<a class="Policies__PolicyLink-sc-1j0dfnl-4 jpLVMg" href="${path}/invest_team/help/privacy.do">개인정보 취급방침</a>
+			</li></ul></nav>
 			<section id="one" class="wrapper style1" style="width:80%;margin-right:auto; margin-left:auto; padding:auto;">
-<!-- 				<div style="float:right"> -->
-<%-- 				<a href="${path}/shop5/board/terms.shop">사용자 이용약관</a>  --%>
-<%-- 				<a href="${path}/shop5/board/privacy.shop">개인정보 취급 방침</a> --%>
-<%-- 				<a href="${path}/shop5/board/fees.shop">수수료 정책</a> --%>
-<!-- 				</div> -->
 				<header class="major">
 					<h2 style="align:center;">개인정보 취급 방침</h2>
 				</header>
-				<div class="container" style="background-color:white; margin-right:auto; margin-left:auto; padding:auto;">
+				<div class="container" style="background-color:white; margin-right:auto; margin-left:auto; padding:auto; width:50%">
 					<section id="general-provisions"><h3>제1조 의의</h3><p>회사는 이용자(이하 "회원" 또는 "이용자")의 동의를 기반으로 개인정보를 수집·이용·제공하고 있으며, 「정보통신망 이용촉진 및 정보보호에 관한 법률」(이하 "정보통신망법")을 준수하여 이용자의 개인정보 자기결정권을 적극적으로 보장합니다. 본 「개인정보처리방침」을 통하여 이용자는 자신의 개인정보가 어떠한 용도와 방식으로 취급되고 있으며, 회사가 개인정보 보호를 위해 어떠한 조치들을 취하고 있는지 알 수 있습니다.</p><p>「개인정보처리방침」은 다음과 같은 의미를 가지고 있습니다.</p><ol><li>회사가 어떤 정보를 수집하고, 어떻게 이용하며, 어떻게 위탁 또는 제공하고, 언제 어떤 방식으로 파기하는지에 관한 사항을 규정합니다.</li><li>정보주체로서 이용자가 자신의 개인정보에 대해 갖는 권리(변경 및 삭제)와 이를 행사하는 방법을 안내해 드립니다.</li><li>개인정보 침해사고가 발생하는 경우 추가 피해를 예방하고 발생한 피해를 복구하기 위한 도움처를 알려드립니다.</li></ol><p>「개인정보처리방침」에서 별도로 정의하지 않는 용어는 「인베스트 웹사이트 이용약관」제2조(용어의 정리)를 참조하시기 바랍니다.</p><p>「개인정보처리방침」은 정부의 법령 및 지침의 변경 또는 나은 서비스의 제공을 위하여 그 내용이 변경될 수 있습니다. 회사는 「개인정보처리방침」을 개정하는 경우, 홈페이지에 공지할 것입니다.</p></section>
 					<section id="what-we-collect"><h3>제2조 개인정보의 수집범위 및 방법</h3><p>회사는 이용자들에게 다양한 서비스를 제공하고 이용자들의 계정 생성을 돕기 위해 개인 정보를 제공받고 이를 활용하여야 합니다. 회사는 이용자들이 제공받는 서비스에 따라 다음과 같은 방법으로 개인정보를 수집합니다.</p><ol><li>회원가입 시 수집하는 개인정보는 아래와 같습니다.</li><ul><li>이메일 회원 가입: 성명 또는 계정이메일, 비밀번호, 이메일 주소, 생년월일</li><li>페이스북 간편 가입: 페이스북 공개 프로필 등 페이스북 간편가입시 자동 수집되는 정보</li><li>네이버 간편 가입: 이용자 식별자 등 네이버 간편가입시 자동 수집되는 정보</li></ul><li>"창작자"로부터 추가로 수집하는 개인정보는 아래와 같습니다.</li><ol><li>프로젝트 신청시 추가 수집</li><ul><li>성명(사업자가 법인인 경우에는 그 명칭과 대표자 성명), 주소, 본인인증 휴대폰번호나 전화번호, 사업자등록번호(사업자), 이메일 주소, 생년월일(개인)</li></ul><li>프로젝트 성사시 추가수집</li><ul><li>은행명, 계좌번호, 예금주명, 계좌종류(개인/사업자)</li><li>별도의 창작자에 대한 확인절차를 위해 창작자의 신분증 사본, 통장 사본, 법인인감 등의 자료를 요구할 수 있습니다.</li></ul></ol><li>"후원자"가 후원금을 후원하는 경우 추가로 아래의 정보를 수집합니다.</li><ul><li>성명, 휴대폰번호, 결제정보, 후원자 주소지, 배송지</li><li>결제정보</li><ol><li>카드결제: 카드번호, 유효기간, 생년월일, 카드비밀번호 앞 2자리</li><li>계좌이체: 계좌번호, 은행, 예금주 성명, 주민등록번호 앞 6자리</li></ol></ul><li>서비스 이용과정에서 IP 주소, 쿠키, 서비스이용기록, 기기정보가 생성되어 수집될 수 있습니다.</li><li>회사는 아래의 방법을 통해 개인정보를 수집합니다.</li><ul><li>회원 가입 및 서비스 이용과정에서 이용자가 개인정보 수집에 대해 동의하고 직접 정보를 입력하는 경우 해당 개인정보를 수집합니다.</li><li>프로젝트 신청, 진행시 직접 해당 개인정보를 입력 또는 제출하는 방식을 통해 창작자의 개인정보를 수집합니다.</li><li>프로젝트 후원 시 직접 해당 개인정보를 입력하는 방식을 통해 후원자의 개인정보를 수집합니다.</li><li>회사와 제휴한 외부 기업이나 단체로부터 개인정보를 제공받을 수 있으며, 이러한 경우에는 정보통신망법에 따라 제휴사에서 이용자에게 개인정보 제공 등을 받은 후에 회사에 제공합니다.</li><li>기기정보와 같은 생성정보는 PC 웹, 모바일 웹, 모바일 어플리케이션 이용과정에서 자동으로 생성되어 수집될 수 있습니다.</li></ul></ol></section>
 					<section id="how-we-use"><h3>제3조 수집한 개인정보의 이용</h3><p>회사는 회원관리, 서비스개발, 제공 및 향상, 안전한 인터넷 이용환경 구축 등 아래의 목적으로만 개인정보를 이용합니다.</p><ul><li>회원 가입 의사의 확인, 연령 확인, 이용자의 본인 확인, 이용자 식별, 회원 탈퇴 의사의 확인 등 회원관리</li><li>부정이용 방지, 비인가사용 방지, 계정 도용, 서비스의 원활한 운영에 지장을 주는 행위에 대한 이용제한 조치, 분쟁조정을 위한 기록보존, 불만이나 민원의 처리, 약관 개정 등의 고지사항 전달 등 이용자 보호 및 서비스 운영</li><li>프로젝트 공개신청 승인여부 판단, 권고사항 전달, 프로젝트 진행 시 발생하는 민원 처리, 후원금액 결제, 프로젝트 성사 시 후원금액 결제, 세금계산서 및 현금영수증 발급, 선물전달, 프로젝트 이행과 관련된 상담 및 관련 민원처리</li><li>설문조사, 이벤트 정보 및 참여기회 제공, 광고성 정보 제공 등 마케팅</li><li>신규 서비스(콘텐츠) 개발 및 특화, 서비스 이용기록과 접속빈도 분석, 서비스 이용에 대한 통계 서비스 분석 및 통계에 따른 맞춤 서비스 제공</li></ul></section>

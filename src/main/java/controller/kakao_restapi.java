@@ -24,16 +24,14 @@ public class kakao_restapi {
 
 		final List<NameValuePair> postParams = new ArrayList<NameValuePair>();
 
-		// Æ÷½ºÆ® ÆÄ¶ó¹ÌÅÍÀÇ grant_typeÀÌ¶ó´Â ¸íÄª¿¡ authorization_code¸¦ Ãß°¡ÇÑ´Ù ¾Æ·¡µµ µ¿ÀÏ
 		postParams.add(new BasicNameValuePair("grant_type", "authorization_code"));
 
 		postParams.add(new BasicNameValuePair("client_id", "8d471762f594e00460f15f188ab7c6d2"));
 
-		postParams.add(new BasicNameValuePair("redirect_uri", "http://localhost:8080/invest_team/user/info2.do")); // ¿¹ :
-																													// http://¾ÆÀÌÇÇ:Æ÷Æ®/ÃÖ»óÀ§Æú´õ/¸®´ÙÀÌ·º¼Ç°æ·Î
+		postParams.add(new BasicNameValuePair("redirect_uri", "http://192.168.0.59:8080/invest_team/user/info2.do")); // ï¿½ï¿½ :
+																													// http://ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½Æ®/ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½Ì·ï¿½ï¿½Ç°ï¿½ï¿½
 
 		postParams.add(new BasicNameValuePair("code", autorize_code));
-		// ±âÅ¸ ¼³¸íÀº »ý·« ÀÚ¼¼È÷ ¾Ë°í ½ÍÀ¸¸é ±¸±Û¸µÇÏ¼¼¿ä.
 		final HttpClient client = HttpClientBuilder.create().build();
 
 		final HttpPost post = new HttpPost(RequestUrl);
@@ -50,7 +48,6 @@ public class kakao_restapi {
 			System.out.println("Post parameters : " + postParams);
 			System.out.println("Response Code : " + responseCode);
 
-//JSONÇüÅÂ ¹ÝÈ¯°ª Ã³¸®ºÎºÐ	 
 			ObjectMapper mapper = new ObjectMapper();
 
 			returnNode = mapper.readTree(response.getEntity().getContent());
@@ -80,7 +77,6 @@ public class kakao_restapi {
 		final String RequestUrl = "https://kapi.kakao.com/v2/user/me";
 		final HttpClient client = HttpClientBuilder.create().build();
 		final HttpPost post = new HttpPost(RequestUrl);
-		// add header
 		post.addHeader("Authorization", "Bearer " + autorize_code);
 		JsonNode returnNode = null;
 		try {
@@ -89,7 +85,6 @@ public class kakao_restapi {
 			System.out.println("\nSending 'POST' request to URL : " + RequestUrl);
 			System.out.println("Response Code : " + responseCode);
 
-			// JSON ÇüÅÂ ¹ÝÈ¯°ª Ã³¸®
 
 			ObjectMapper mapper = new ObjectMapper();
 

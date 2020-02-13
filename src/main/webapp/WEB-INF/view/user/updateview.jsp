@@ -3,6 +3,7 @@
    <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt"  uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 
 <html lang="ko" class="row-clear js flexbox rgba opacity video boxsizing no-maclike no-ios no-ie"><head>
@@ -129,12 +130,25 @@
       닉네임
 </label>    <form:input  path="nic" class="b-form__item form-field col-3" type="text"/> 
   </div>
-  <div class="b-form-list">
-    <label class="b-form__label text-size_xs">
-     성별
-</label><input class="b-form__item form-field col-3" type="text" readonly
- value= "${user.gender}" > 
+  
+  
+
+  <c:if test="${user.gender eq 'male' }">
+  <div class="b-form-list">  <label class="b-form__label text-size_xs">
+     성별</label>
+<input class="b-form__item form-field col-3" type="text" readonly
+ value= '남자' > 
   </div>
+  </c:if>
+  <c:if test="${user.gender eq 'female' }">
+  <div class="b-form-list">  <label class="b-form__label text-size_xs">
+     성별</label>
+<input class="b-form__item form-field col-3" type="text" readonly
+ value= '여자' > 
+  </div>
+  </c:if>
+  
+  
   <div class="b-form-list">
     <label class="b-form__label text-size_xs">
       이름
@@ -161,7 +175,9 @@
    <div class="b-form-list">
     <label class="b-form__label text-size_xs">
       가입일자
-</label>    <input class="b-form__item form-field col-3" type="search" value="${user.signdate }" readonly> 
+</label>   <fmt:formatDate  var="date2" value="${user.signdate }" type="DATE" pattern="yyyy-MM-dd"/>
+
+    <input class="b-form__item form-field col-3" type="search" value="${date2}" readonly> 
   </div>
   <div class="b-form-list">
     <label class="b-form__label text-size_xs">

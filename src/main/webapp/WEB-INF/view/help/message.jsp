@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>   
+    pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/view/jspHeader.jsp" %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
 <title>문의 하기</title>
 </head>
 <body>
-<section id="main" class="wrapper style1">
+<section id="main" class="wrapper style1" style="background-color:whitesmoke;">
 				<header class="major">
 					<h2>invest 문의하기</h2>
 					<p>이메일 주소와 함께 문의를 남겨주세요. 영업일 기준 2일 내에 답변 드리겠습니다.</p>
@@ -19,33 +20,35 @@
 						<div class="8u" style="margin-left:230px;">
 							<section class="Qna">
 								<h2>문의 하기</h2>
+								<form:form modelAttribute="ms" action="message.do"
+  									 enctype="multipart/form-data" name="f">
 								<table>
 								<tr>
 									<th>문의 유형</th>
 								<td>
 									<select>
-									<option>선택하세요.</option>
-									<option>후원자 - 밀어주기(후원), 결제</option>
-									<option>후원자 - 후원내역 관리, 선물 수령</option>
-									<option>창작자 - 프로젝트 올리기, 공개검토</option>
-									<option>창작자 - 프로젝트 관리, 정산, 선물 실행</option>
+									<option value="" selected disabled hidden>선택하세요.</option>
+									<option value="후원자 - 밀어주기(후원), 결제">후원자 - 밀어주기(후원), 결제</option>
+									<option value="후원자 - 후원내역 관리, 선물 수령">후원자 - 후원내역 관리, 선물 수령</option>
+									<option value="창작자 - 프로젝트 올리기, 공개검토">창작자 - 프로젝트 올리기, 공개검토</option>
+									<option value="창작자 - 프로젝트 관리, 정산, 선물 실행">창작자 - 프로젝트 관리, 정산, 선물 실행</option>
 								</select></td></tr>
 								<tr>
 								<th>보내는 사람</th>
-								<td><input type="text"></td>
+								<td><form:input path="id" /></td>
 								</tr>
 								<tr>
 								<th>받는 사람</th>
-								<td><input type="text"></td>
+								<td><form:input path="rec_id" /></td>
 								</tr>
 								<tr>
 								<th>제목</th>
-								<td><input type="text"></td>
+								<td><form:input path="ms_title" /></td>
 								<tr>
 								<th>내용</th>
-								<td><textarea></textarea></td>
-								<tr><td colspan="2" align=center><input type="button" value="보내기"></td>
-								</table>
+								<td><form:textarea path="ms_content"/></td>
+								<tr><td colspan="2" align=center><a href="javascript:document.f.submit()">보내기</a></td>
+								</table></form:form>
 					</section>
 						</div>
 					</div>

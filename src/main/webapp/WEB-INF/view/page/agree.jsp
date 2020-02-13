@@ -18,10 +18,10 @@
 				<br data-reactid="45">아래 사항들을 확인한 후 프로젝트를 올려 주세요.
 				<ul data-reactid="47">
 					<li data-reactid="48">
-						<a href="${path}/invest_teamproject/help/cr3.do" target="_blank" rel="noopener noreferrer" data-reactid="49">인베스트 프로젝트 규칙</a>
+						<a href="${path}/invest_team/help/cr1-1.do" target="_blank" rel="noopener noreferrer" data-reactid="49">인베스트 프로젝트 규칙</a>
 					</li>
 					<li data-reactid="50">
-						<a href="${path}/invest_teamproject/help/cr4.do" target="_blank" rel="noopener noreferrer" data-reactid="51">창작자 자격 요건</a>
+						<a href="${path}/invest_team/help/cr1-4.do" target="_blank" rel="noopener noreferrer" data-reactid="51">창작자 자격 요건</a>
 					</li>
 				</ul>
 			</div>

@@ -176,7 +176,7 @@
 									<div class="Discover__Search-nj6hnw-1 iRqcUq">
 										<div class="Discover__DiscoverMenuTitle-nj6hnw-0 cXVSSP">검색</div>
 										<div class="SearchWidget__SerchInputWidget-sc-1quikp3-0 cOihOp">
-											<form action="search.do" method="post">
+											<form action="../page/search.do" method="post">
 												<input type="search" class="SearchWidget__Input-sc-1quikp3-1 fpAvJE" placeholder="프로젝트를 검색해주세요" name="search">
 												<input type="submit" style="display: none;"><button class="Button-sc-1x93b2b-0 laSBHo">검색하기</button>
 											</form>
@@ -187,22 +187,22 @@
 								<div class="Container-gci8y7-0 GPraD">
 									<div class="Divider-sc-17hnup0-0 hiPjSF"></div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="search.do?project=all">
+										<a href="../page/search.do?project=all">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">모든 프로젝트</span>
 										</a>
 									</div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="search.do?project=pop">
+										<a href="../page/search.do?project=pop">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">인기 추천 프로젝트</span>
 										</a>
 									</div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="search.do?project=end">
+										<a href="../page/search.do?project=end">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">마감 임박 프로젝트</span>
 										</a>
 									</div>
 									<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-										<a href="search.do?project=new">
+										<a href="../page/search.do?project=new">
 											<span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">신규 추천 프로젝트</span>
 										</a>
 									</div>
@@ -211,56 +211,56 @@
 										<div class="Discover__DiscoverMenuTitle-nj6hnw-0 cXVSSP">카테고리</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=게임">
+												<a href="../page/search.do?category=게임">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs fqUNKa">게임</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=공예">
+												<a href="../page/search.do?category=공예">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs gJlLvU">공예</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=영화·비디오">
+												<a href="../page/search.do?category=영화·비디오">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs jHNvwL">영화·비디오</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=패션">
+												<a href="../page/search.do?category=패션">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs hpAJSZ">패션</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=만화">
+												<a href="../page/search.do?category=만화">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs ZHivy">만화</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=디자인">
+												<a href="../page/search.do?category=디자인">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs glgpYK">디자인</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=음악">
+												<a href="../page/search.do?category=음악">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs fqUNKa">음악</span>
 												</a>
 											</div>
 										</div>
 										<div class="Discover__TagCollection-nj6hnw-2 cFWYCw">
 											<div class="MenuItem-sc-16gdmz1-0 qlsxv">
-												<a href="search.do?category=테크놀로지">
+												<a href="../page/search.do?category=테크놀로지">
 													<span class="sc-16gdmz1-1-MenuItem__MenuItemTitle-pPnRs gJlLvU">테크놀로지</span>
 												</a>
 											</div>
@@ -290,7 +290,7 @@
 	<c:if test="${loginUser.name eq '이도영' }">
 	<a href="../admin/dash.do"><div class="MenuItem-sc-16gdmz1-0 qlsxv"><span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">관리자 페이지 이동</span></div></a>
 	</c:if>
-	<a href="../user/message.do?id=${loginUser.name }"><div class="MenuItem-sc-16gdmz1-0 qlsxv"><span class="MenuItem__MenuItemTitle-sc-16gdmz1-1 ccLTPG">내 메세지</span></div></a>
+		
 	
 	<c:if test = "${login eq 'kakao'}">
 	
@@ -322,7 +322,7 @@
 				<a class="_3TJ2LNmiyFnXVggSgiKX5Q" href="${path}/help/commu.do" data-reactid="78">커뮤니티 정책</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<a class="_3TJ2LNmiyFnXVggSgiKX5Q" href="${path}/help/help.do" data-reactid="78">헬프 센터</a>
 			</div>
-		</div><div class="footer-column grid-sixteen _2yIPuXkUmexMNa4oYh94d2 _152MAijd_UogerBKCVqZR_ _1lLHKI5v9AoCyeggtffvGZ" data-reactid="453"><span data-reactid="454">텀블벅은 플랫폼 제공자로서 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.</span></div><div class="footer-column grid-sixteen  _2AKJF7ih68n2TcW3TIF8-t _152MAijd_UogerBKCVqZR_ _1lLHKI5v9AoCyeggtffvGZ" data-reactid="455"><span data-reactid="456">텀블벅(주) | 대표 염재승 105-87-52823 | 서울시 중구 청계천로 100, 시그니쳐타워 9층 (수표동) | 통신판매업 2019-3010165-30-2-02129 | 대표전화 02-6080-0760</span><span class="_1NwnhTlynaDwYqlZ_SKgmG" data-reactid="457"><span role="img" aria-labelledby="copyright emoji" data-reactid="458">©</span><!-- react-text: 459 --> <!-- /react-text --><!-- react-text: 460 -->2020<!-- /react-text --><!-- react-text: 461 --> Tumblbug Inc.<!-- /react-text --></span></div></div></div>
+		</div><div class="footer-column grid-sixteen _2yIPuXkUmexMNa4oYh94d2 _152MAijd_UogerBKCVqZR_ _1lLHKI5v9AoCyeggtffvGZ" data-reactid="453"><span data-reactid="454">INVEST는 플랫폼 제공자로서 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.</span></div><div class="footer-column grid-sixteen  _2AKJF7ih68n2TcW3TIF8-t _152MAijd_UogerBKCVqZR_ _1lLHKI5v9AoCyeggtffvGZ" data-reactid="455"><span data-reactid="456">INVEST(주) | 대표 이도영 010-3947-3290 | 하남시 신장동 대명아파트 VIP타워 9층 | 통신판매업 2019-3010165-30-2-02129 | 대표전화 010-3947-3290</span><span class="_1NwnhTlynaDwYqlZ_SKgmG" data-reactid="457"><span role="img" aria-labelledby="copyright emoji" data-reactid="458">©</span><!-- react-text: 459 --> <!-- /react-text --><!-- react-text: 460 -->2020<!-- /react-text --><!-- react-text: 461 --> INVEST Inc.<!-- /react-text --></span></div></div></div>
 
 
 </body>

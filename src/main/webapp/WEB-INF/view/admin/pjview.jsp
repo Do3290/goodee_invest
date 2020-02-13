@@ -10,7 +10,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td><img src="file/${mainimg}"/></td>
+			<td><img style="width:200px;height:200px;"src="../page/file/${mainimg}"/></td>
 			<td>${summary}</td>
 		</tr>
 	</tbody>
